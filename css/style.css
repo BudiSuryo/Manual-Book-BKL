@@ -87,7 +87,7 @@ button:hover {
 }
 
 .print-btn {
-  margin-left: 10px
+  margin-left: 10px;
   background-color: #0078D4;
   color: white;
   max-width: 300px;
@@ -115,7 +115,4 @@ button:hover {
   transition: border-color 0.3s ease;
 }
 
-.search-box:focus {
-  border-color: #0078D4;
-  box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.2);
-}
+
