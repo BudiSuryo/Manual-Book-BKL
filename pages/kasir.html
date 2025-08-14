@@ -1,18 +1,30 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <title>Jobdesc Kasir</title>
-  <link rel="stylesheet" href="../css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolektor - Manual Book BPR</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js"></script>
 </head>
 <body>
-  <div class="content-box">
-    <h2>Jobdesc Kasir</h2>
-    <ul>
-      <li>Melakukan transaksi tunai dan non-tunai</li>
-      <li>Verifikasi dokumen nasabah</li>
-      <li>Input data ke sistem core banking</li>
-    </ul>
-  </div>
+    <header>
+        <img src="../assets/logo.png" alt="Logo BPR"> Manual Book BPR
+    </header>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="kasir.html">Kasir</a>
+        <a href="tabungan.html">Tabungan</a>
+        <a href="kolektor.html">Kolektor</a>
+    </nav>
+    <div class="container">
+        <div class="breadcrumb">📍 <a href="../index.html">Home</a> / Kolektor</div>
+        <button class="print-btn" onclick="printPage()">🖨 Print PDF</button>
+        <div class="search-box">
+            <input type="text" id="search" placeholder="Cari dalam Kolektor..." onkeyup="searchJobdesc()">
+        </div>
+        <div class='jobdesc-section'><h3>Penagihan Kredit</h3><p>Mengunjungi nasabah untuk menagih angsuran kredit.</p></div><div class='jobdesc-section'><h3>Laporan Penagihan</h3><p>Membuat laporan hasil penagihan harian.</p></div><div class='jobdesc-section'><h3>Monitoring Koleksi</h3><p>Memastikan koleksi angsuran sesuai target.</p></div>
+    </div>
 </body>
 </html>
