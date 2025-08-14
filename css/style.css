@@ -87,8 +87,10 @@ button:hover {
 }
 
 .print-btn {
+  margin-left: 10px
   background-color: #0078D4;
   color: white;
+  max-width: 300px;
   padding: 10px 20px;
   border: none;
   border-radius: 6px;
