@@ -1,4 +1,5 @@
 rchbconsole.log("validateLogin triggered");
+console.log("Tombol diklik");
 function validateLogin() {
   const role = document.getElementById("role").value;
   const password = document.getElementById("password").value;
