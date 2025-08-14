@@ -42,15 +42,21 @@ function jumpToKeyword() {
   const keyword = document.getElementById("searchInput").value.toLowerCase();
   if (!keyword) return;
 
-  // Cari semua elemen teks (bisa disesuaikan: p, li, div, span, dll)
-  const elements = document.querySelectorAll("p, li, div, span");
+  // Bersihkan highlight sebelumnya
+  const allElements = document.querySelectorAll("p, li, div, span");
+  allElements.forEach(el => el.style.backgroundColor = "");
 
-  for (let el of elements) {
+  let firstMatch = null;
+
+  allElements.forEach(el => {
     if (el.textContent.toLowerCase().includes(keyword)) {
-      el.scrollIntoView({ behavior: "smooth", block: "center" });
-      el.style.backgroundColor = "#ffff99"; // highlight sementara
-      setTimeout(() => el.style.backgroundColor = "", 2000); // hilangkan highlight
-      break; // lompat ke elemen pertama saja
+      el.style.backgroundColor = "#ffff99"; // highlight
+      if (!firstMatch) firstMatch = el;
     }
+  });
+
+  if (firstMatch) {
+    firstMatch.scrollIntoView({ behavior: "smooth", block: "center" });
   }
+}
 }
