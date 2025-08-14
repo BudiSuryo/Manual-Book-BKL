@@ -1,4 +1,4 @@
-rchbconsole.log("validateLogin triggered");
+console.log("validateLogin triggered");
 console.log("Tombol diklik");
 function validateLogin() {
   const role = document.getElementById("role").value;
@@ -39,8 +39,12 @@ function showError(message) {
   }, 3000); // Hide after 3 seconds
 }
 
+// PASANG EVENT LISTENER SEKALI SAJA DI LUAR FUNCTION
+// ASSUMSI: Input pencarian punya id="searchInput", tombol cari id="searchButton"
+document.getElementById("searchButton").addEventListener("click", jumpToKeyword);
+
 function jumpToKeyword() {
-  const keyword = document.getElementById("searchButton").addEventListener("click", jumpToKeyword).value.toLowerCase();
+  const keyword = document.getElementById("searchInput").value.toLowerCase();
   if (!keyword) return;
 
   // Bersihkan highlight sebelumnya
@@ -48,11 +52,13 @@ function jumpToKeyword() {
   allElements.forEach(el => el.style.backgroundColor = "");
 
   let firstMatch = null;
+  let matchCount = 0;
 
   allElements.forEach(el => {
     if (el.textContent.toLowerCase().includes(keyword)) {
       el.style.backgroundColor = "#ffff99"; // highlight
       if (!firstMatch) firstMatch = el;
+      matchCount++;
     }
   });
 
@@ -60,13 +66,5 @@ function jumpToKeyword() {
     firstMatch.scrollIntoView({ behavior: "smooth", block: "center" });
   }
 
-  let matchCount = 0;
-allElements.forEach(el => {
-  if (el.textContent.toLowerCase().includes(keyword)) {
-    el.style.backgroundColor = "#ffff99";
-    if (!firstMatch) firstMatch = el;
-    matchCount++;
-  }
-});
-console.log(`Ditemukan ${matchCount} elemen yang cocok.`);
+  console.log(`Ditemukan ${matchCount} elemen yang cocok.`);
 }
