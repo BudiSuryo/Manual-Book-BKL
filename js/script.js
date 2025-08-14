@@ -58,4 +58,14 @@ function jumpToKeyword() {
   if (firstMatch) {
     firstMatch.scrollIntoView({ behavior: "smooth", block: "center" });
   }
+
+  let matchCount = 0;
+allElements.forEach(el => {
+  if (el.textContent.toLowerCase().includes(keyword)) {
+    el.style.backgroundColor = "#ffff99";
+    if (!firstMatch) firstMatch = el;
+    matchCount++;
+  }
+});
+console.log(`Ditemukan ${matchCount} elemen yang cocok.`);
 }
