@@ -65,7 +65,7 @@ label {
 }
 
 input, select {
-  width: 100%;
+  max-width: 400px;
   padding: 8px;
   margin-top: 5px;
   box-sizing: border-box;
@@ -73,11 +73,11 @@ input, select {
 
 button {
   margin-top: 20px;
-  width: 100%;
+  max-width: 400px;
   padding: 10px;
   background-color: #0078D4;
   color: white;
-  border: none;
+  border: 2px;
   border-radius: 4px;
   cursor: pointer;
 }
