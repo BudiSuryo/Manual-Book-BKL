@@ -1,4 +1,4 @@
-console.log("validateLogin triggered");
+rchbconsole.log("validateLogin triggered");
 function validateLogin() {
   const role = document.getElementById("role").value;
   const password = document.getElementById("password").value;
@@ -39,7 +39,7 @@ function showError(message) {
 }
 
 function jumpToKeyword() {
-  const keyword = document.getElementById("searchInput").value.toLowerCase();
+  const keyword = document.getElementById("searchButton").addEventListener("click", jumpToKeyword).value.toLowerCase();
   if (!keyword) return;
 
   // Bersihkan highlight sebelumnya
