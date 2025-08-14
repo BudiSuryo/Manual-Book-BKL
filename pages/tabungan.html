@@ -1,30 +1,76 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kolektor - Manual Book BPR</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/script.js"></script>
+    <title>Manual Book Kasir - BPR</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <img src="../assets/logo.png" alt="Logo BPR"> Manual Book BPR
-    </header>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="kasir.html">Kasir</a>
-        <a href="tabungan.html">Tabungan</a>
-        <a href="kolektor.html">Kolektor</a>
-    </nav>
-    <div class="container">
-        <div class="breadcrumb">📍 <a href="../index.html">Home</a> / Tabungan</div>
-        <button class="print-btn" onclick="printPage()">🖨 Print PDF</button>
-        <div class="search-box">
-            <input type="text" id="search" placeholder="Cari dalam Kolektor..." onkeyup="searchJobdesc()">
+        <h1>Manual Book Kasir - BPR</h1>
+        <nav class="breadcrumb">
+            <a href="index.html">Beranda</a> &gt; <span>Kasir</span>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Cari di manual...">
         </div>
-        <div class='jobdesc-section'><h3>Penagihan Kredit</h3><p>Mengunjungi nasabah untuk menagih angsuran kredit.</p></div><div class='jobdesc-section'><h3>Laporan Penagihan</h3><p>Membuat laporan hasil penagihan harian.</p></div><div class='jobdesc-section'><h3>Monitoring Koleksi</h3><p>Memastikan koleksi angsuran sesuai target.</p></div>
-    </div>
+    </header>
+
+    <main>
+        <section id="pendahuluan">
+            <h2>Pendahuluan</h2>
+            <p>Manual Book ini disusun untuk memberikan panduan lengkap kepada Kasir BPR dalam menjalankan tugas dan tanggung jawabnya sesuai standar perusahaan dan regulasi yang berlaku.</p>
+        </section>
+
+        <section id="jobdesc">
+            <h2>Job Description</h2>
+            <ul>
+                <li>Menerima dan memproses transaksi tunai dan non-tunai.</li>
+                <li>Melakukan pencatatan akurat pada sistem keuangan BPR.</li>
+                <li>Menyediakan layanan prima kepada nasabah.</li>
+                <li>Melakukan rekonsiliasi kas harian.</li>
+            </ul>
+        </section>
+
+        <section id="tanggungjawab">
+            <h2>Tanggung Jawab</h2>
+            <ul>
+                <li>Menjaga keamanan kas dan dokumen transaksi.</li>
+                <li>Memastikan keaslian uang dan dokumen yang diterima.</li>
+                <li>Melaporkan selisih kas kepada atasan langsung.</li>
+                <li>Mematuhi semua peraturan dan prosedur BPR.</li>
+            </ul>
+        </section>
+
+        <section id="wewenang">
+            <h2>Wewenang</h2>
+            <ul>
+                <li>Memverifikasi keaslian transaksi dan dokumen.</li>
+                <li>Menolak transaksi yang tidak sesuai SOP.</li>
+                <li>Meminta dokumen pendukung nasabah jika diperlukan.</li>
+            </ul>
+        </section>
+
+        <section id="sop">
+            <h2>Standar Operasional Prosedur (SOP)</h2>
+            <ol>
+                <li>Menerima setoran tunai dari nasabah dan memeriksa keaslian uang.</li>
+                <li>Memasukkan data transaksi ke sistem BPR secara langsung.</li>
+                <li>Mencetak bukti transaksi dan menyerahkannya kepada nasabah.</li>
+                <li>Melakukan pencocokan saldo kas pada akhir hari.</li>
+                <li>Menyetor seluruh saldo kas akhir hari ke brankas sesuai ketentuan.</li>
+            </ol>
+        </section>
+
+        <section id="catatan">
+            <h2>Catatan Penting</h2>
+            <p>Kasir wajib menjaga kerahasiaan data nasabah, mematuhi semua regulasi OJK, dan menghindari konflik kepentingan. Pelanggaran terhadap aturan ini akan dikenakan sanksi sesuai ketentuan perusahaan.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 BPR - Manual Book Kasir</p>
+    </footer>
 </body>
 </html>
