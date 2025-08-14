@@ -1,3 +1,4 @@
+console.log("validateLogin triggered");
 function validateLogin() {
   const role = document.getElementById("role").value;
   const password = document.getElementById("password").value;
