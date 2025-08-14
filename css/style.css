@@ -86,3 +86,19 @@ button:hover {
   background-color: #005fa3;
 }
 
+.print-btn {
+  background-color: #0078D4;
+  color: red;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.print-btn:hover {
+  background-color: #005A9E;
+}
