@@ -59,4 +59,3 @@ function jumpToKeyword() {
     firstMatch.scrollIntoView({ behavior: "smooth", block: "center" });
   }
 }
-}
