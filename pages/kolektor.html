@@ -1,30 +1,129 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kolektor - Manual Book BPR</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/script.js"></script>
+    <title>Manual Book Kolektor - BPR</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <img src="../assets/logo.png" alt="Logo BPR"> Manual Book BPR
-    </header>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="kasir.html">Kasir</a>
-        <a href="tabungan.html">Tabungan</a>
-        <a href="kolektor.html">Kolektor</a>
-    </nav>
-    <div class="container">
-        <div class="breadcrumb">📍 <a href="../index.html">Home</a> / Kolektor</div>
-        <button class="print-btn" onclick="printPage()">🖨 Print PDF</button>
-        <div class="search-box">
-            <input type="text" id="search" placeholder="Cari dalam Kolektor..." onkeyup="searchJobdesc()">
+        <h1>Manual Book Kolektor - BPR Kreo Lestari</h1>
+        <nav class="breadcrumb">
+            <a href="../index.html">Beranda</a> &gt; <span>Kolektor</span>
+        </nav>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Cari kata..."><button id="searchButton">Cari</button>
         </div>
-        <div class='jobdesc-section'><h3>Penagihan Kredit</h3><p>Mengunjungi nasabah untuk menagih angsuran kredit.</p></div><div class='jobdesc-section'><h3>Laporan Penagihan</h3><p>Membuat laporan hasil penagihan harian.</p></div><div class='jobdesc-section'><h3>Monitoring Koleksi</h3><p>Memastikan koleksi angsuran sesuai target.</p></div>
-    </div>
+    </header>
+
+    <main>
+        <section id="pendahuluan">
+            <h2>Pendahuluan</h2>
+            <p>Manual Book ini menjadi panduan resmi bagi Kolektor BPR dalam menjalankan kegiatan penagihan, kunjungan nasabah, dan pelaporan hasil kerja, sesuai dengan SOP internal dan regulasi yang berlaku.</p>
+        </section>
+
+        <section id="jobdesc">
+            <h2>I. Job Description</h2>
+            <p>
+            <strong>Posisi:</strong> Kolektor<br/>
+            <strong>Divisi:</strong> Kredit / Collection<br/>
+            <strong>Atasan Langsung:</strong> Kepala Unit Kolektor / Manager Kredit
+            </p>
+            <h3>Tugas Utama:</h3> 
+            <ol>
+                <li>Melakukan penagihan angsuran kredit nasabah tepat waktu.</li>
+                <li>Menerima setoran titipan tabungan dari nasabah.</li>
+                <li>Mengunjungi nasabah sesuai jadwal kunjungan harian.</li>
+                <li>Menginput hasil kunjungan dan pembayaran ke sistem AppSheet.</li>
+                <li>Melaporkan kendala penagihan ke atasan.</li>
+                <li>Menjaga hubungan baik dengan nasabah untuk kelancaran pembayaran.</li>
+            </ol>
+        </section>
+
+        <section id="wewenang-tanggungjawab">
+            <h2>II. Wewenang dan Tanggung Jawab</h2>
+            <h3>A. Wewenang Kolektor:</h3>
+            <ol>
+                <li>Melakukan penagihan langsung ke nasabah sesuai daftar tagihan.</li>
+                <li>Menerima pembayaran dari nasabah dalam bentuk tunai atau transfer sesuai ketentuan.</li>
+                <li>Menyampaikan surat peringatan kepada nasabah menunggak.</li>
+            </ol>
+            <h3>B. Tanggung Jawab:</h3>
+            <ol>
+                <li>Menjaga keamanan dana yang diterima sampai disetor ke kasir.</li>
+                <li>Melaporkan semua hasil penagihan secara harian.</li>
+                <li>Menjaga kerahasiaan data nasabah.</li>
+                <li>Mematuhi prosedur penagihan yang berlaku dan menghindari kekerasan/fraud.</li>
+            </ol>
+        </section>
+
+        <section id="sop">
+            <h2>III. Standar Operasional Prosedur (SOP) Kolektor</h2>
+
+            <h3>A. Persiapan Sebelum Penagihan</h3>
+            <ol>
+                <li>Menerima daftar nasabah yang akan ditagih dari atasan.</li>
+                <li>Memastikan semua data tagihan lengkap (nama, alamat, nominal, jatuh tempo).</li>
+                <li>Menyiapkan surat penagihan atau surat peringatan jika diperlukan.</li>
+                <li>Siapkan perangkat kerja (HP, buku catatan, kwitansi resmi).</li>
+            </ol>
+
+            <h3>B. Pelaksanaan Penagihan</h3>
+            <ol>
+                <li>Kunjungi nasabah sesuai rute yang telah ditentukan.</li>
+                <li>Perkenalkan diri dan sampaikan tujuan penagihan dengan sopan.</li>
+                <li>Verifikasi identitas nasabah sebelum menerima pembayaran.</li>
+                <li>Terima pembayaran tunai sesuai nominal dan berikan bukti pembayaran resmi.</li>
+                <li>Jika pembayaran via transfer, pastikan bukti transfer valid dan infokan ke Kantor Cabang masing-masing untuk lanjut diproses oleh Bagian Tabungan.</li>
+                <li>Input hasil penagihan ke sistem AppSheet secara real-time.</li>
+            </ol>
+
+            <h3>C. Penanganan Nasabah Menunggak</h3>
+            <ol>
+                <li>Sampaikan surat peringatan atau penjadwalan ulang pembayaran.</li>
+                <li>Catat alasan keterlambatan dan potensi penyelesaian.</li>
+                <li>Lapor ke atasan untuk tindak lanjut (misalnya restrukturisasi).</li>
+            </ol>
+
+            <h3>D. Penyetoran Hasil Tagihan</h3>
+            <ol>
+                <li>Setor seluruh hasil penagihan ke kasir BPR pada hari yang sama.</li>
+                <li>Cocokkan nominal setoran dengan laporan penagihan.</li>
+                <li>Minta tanda terima setoran dari kasir.</li>
+            </ol>
+
+            <h3>E. Pelaporan Harian</h3>
+            <ol>
+                <li>Rekap seluruh hasil penagihan (tunai & transfer) di AppSheet.</li>
+                <li>Laporkan kendala atau kasus khusus ke atasan.</li>
+                <li>Simpan arsip bukti pembayaran untuk keperluan audit.</li>
+            </ol>
+        </section>
+
+        <section id="prilaku-kerja">
+            <h2>IV. Aturan dan Perilaku Kerja</h2>
+            <ol>
+                <li>Menggunakan seragam resmi, ID Card, dan membawa surat tugas.</li>
+                <li>Bersikap sopan, ramah, dan profesional dalam setiap interaksi.</li>
+                <li>Dilarang menerima pembayaran tanpa memberikan bukti resmi.</li>
+                <li>Dilarang menggunakan dana tagihan untuk kepentingan pribadi.</li>
+            </ol>
+        </section>
+
+        <section id="catatan">
+            <h2>V. Catatan Penting</h2>
+            <p>
+                Kolektor wajib mematuhi regulasi OJK dan SOP internal BPR.  
+                Dilarang melakukan intimidasi atau tindakan di luar hukum.  
+                Semua transaksi penagihan harus tercatat di sistem dan dapat dipertanggungjawabkan.  
+                Pelanggaran akan dikenakan sanksi sesuai ketentuan perusahaan.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 BPR - Manual Book Kolektor</p>
+    </footer>
 </body>
 </html>
