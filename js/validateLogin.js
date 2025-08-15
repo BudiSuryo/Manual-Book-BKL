@@ -1,18 +1,18 @@
 // validateLogin.js
 const passwords = {
-    "kasir.html": "1234",
-    "tabungan.html": "1234",
-    "kolektor.html": "1234",
-    "adm_kredit.html": "1234",
-    "analis.html": "1234",
-    "audit.html": "1234",
-    "gm_marketing.html": "1234",
-    "gm_ops.html": "1234",
-    "hrd.html": "1234",
-    "ka_back_office.html": "1234",
-    "kabag_kredit.html": "1234",
-    "kacab.html": "1234",
-    "legal.html": "1234"
+    "pages/kasir.html": "1234",
+    "pages/tabungan.html": "1234",
+    "pages/kolektor.html": "1234",
+    "pages/adm_kredit.html": "1234",
+    "pages/analis.html": "1234",
+    "pages/audit.html": "1234",
+    "pages/gm_marketing.html": "1234",
+    "pages/gm_ops.html": "1234",
+    "pages/hrd.html": "1234",
+    "pages/ka_back_office.html": "1234",
+    "pages/kabag_kredit.html": "1234",
+    "pages/kacab.html": "1234",
+    "pages/legal.html": "1234"
 };
 
 function validateLogin() {
