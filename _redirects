@@ -10,4 +10,4 @@
 /ka_back_office.html 200! BasicAuth ka_back_office:passka_back_office
 /kabag_kredit.html 200! BasicAuth kabag_kredit:passkabag_kredit
 /kacab.html 200! BasicAuth kacab:passkacab
-/legal.html 200! BasicAuth  legal:passlegal
+/legal.html 200! BasicAuth legal:passlegal
