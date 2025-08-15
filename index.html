@@ -46,12 +46,6 @@ function hideLoading() {
     if (loading) loading.style.display = "none";
 }
 
-// Proteksi halaman (jalankan secepat mungkin)
-if (sessionStorage.getItem("isLoggedIn") !== "true") {
-    hideLoading(); // pastikan spinner dimatikan sebelum redirect
-    window.location.href = "index.html";
-}
-
 // Tangani saat halaman kembali dari cache (tombol back/forward)
 window.addEventListener("pageshow", function(event) {
     hideLoading();
