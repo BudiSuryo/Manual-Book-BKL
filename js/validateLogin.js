@@ -1,3 +1,4 @@
+// validateLogin.js
 const passwords = {
     "kasir.html": "1234",
     "tabungan.html": "1234",
@@ -15,23 +16,32 @@ const passwords = {
 };
 
 function validateLogin() {
-    var password = document.getElementById("password").value;
-    var select = document.getElementById("role");
-    var page = select.value;
+    const password = document.getElementById("password").value;
+    const select = document.getElementById("role");
+    const page = select.value;
 
+    // Cek jika belum pilih bagian
     if (!page) {
         alert("Silakan pilih bagian!");
         return false;
     }
 
+    // Validasi password
     if (passwords[page] && password === passwords[page]) {
-        var loading = document.getElementById("loading");
+        // Simpan status login
+        sessionStorage.setItem("isLoggedIn", "true");
+
+        // Tampilkan loading
+        const loading = document.getElementById("loading");
         if (loading) loading.style.display = "block";
+
+        // Redirect ke halaman
         window.location.href = page;
         return false;
     } else {
-        var errorBox = document.getElementById("errorBox");
-        var errorMessage = document.getElementById("errorMessage");
+        // Tampilkan pesan error
+        const errorBox = document.getElementById("errorBox");
+        const errorMessage = document.getElementById("errorMessage");
         if (errorBox && errorMessage) {
             errorMessage.textContent = "Password salah!";
             errorBox.style.display = "block";
