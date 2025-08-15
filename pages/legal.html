@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manual Book Bagian Legal - BPR</title>
     <link rel="stylesheet" href="css/style.css">
+	 <script>
+    // Proteksi halaman (jalankan secepat mungkin sebelum konten ditampilkan)
+    if (sessionStorage.getItem("isLoggedIn") !== "true") {
+        window.location.href = "index.html";
+    }
+  </script>
 </head>
 <body>
     <header>
@@ -116,7 +122,7 @@
             <h2>V. Catatan Penting</h2>
             <p>
                 Bagian Legal memegang peranan penting dalam melindungi BPR dari risiko hukum. 
-                Setiap pelanggaran atau kelalaian dalam tugas dapat berdampak serius terhadap operasional dan reputasi perusahaan, dan akan dikenakan sanksi sesuai aturan perusahaan.
+                Setiap pelanggaran atau kelalaian dalam tugas dapat berdampak serius terhadap operasional dan reputasi perusahaan.
                 Oleh karena itu, setiap prosedur hukum wajib dilaksanakan dengan teliti dan tepat waktu.
             </p>
         </section>
@@ -127,3 +133,4 @@
     </footer>
 </body>
 </html>
+
