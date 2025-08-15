@@ -5,9 +5,20 @@ function validateLogin() {
   const password = document.getElementById("password").value;
 
   const credentials = {
-    kasir: "kasir123",
-    tabungan: "tabungan123",
-    kolektor: "kolektor123"
+    kasir: "1234",
+    tabungan: "1234",
+    kolektor: "1234",
+    adm_kredit: "1234",
+    analis: "1234",
+    audit: "1234",
+    gm_marketing: "1234",
+    gm_ops: "1234",
+    hrd: "1234",
+    ka_back_office: "1234",
+    kabag_kredit: "1234",
+    kacab: "1234",
+    legal: "1234"
+    
   };
 
   // Show loading
