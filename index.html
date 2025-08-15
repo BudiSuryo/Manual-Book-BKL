@@ -39,6 +39,24 @@
       
   <!-- Pastikan path JS benar -->   
 <script src="js/validateLogin.js"></script> 
+<script>
+// Matikan spinner kalau ada
+function hideLoading() {
+    let loading = document.getElementById("loading");
+    if (loading) loading.style.display = "none";
+}
+
+// Proteksi halaman (jalankan secepat mungkin)
+if (sessionStorage.getItem("isLoggedIn") !== "true") {
+    hideLoading(); // pastikan spinner dimatikan sebelum redirect
+    window.location.href = "index.html";
+}
+
+// Tangani saat halaman kembali dari cache (tombol back/forward)
+window.addEventListener("pageshow", function(event) {
+    hideLoading();
+});
+</script>
     
   <!-- Loading Spinner -->
 <div id="loading" style="display:none;">
