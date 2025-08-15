@@ -27,8 +27,9 @@ header {
 }
 .logo {
     display: block;       /* Biar img jadi elemen blok */
-    margin: 20 auto 0px;  /* Center horizontal + jarak bawah */
-    max-width: 240px;     /* Batas ukuran maksimum */
+    margin: 70px auto 10px;  /* Center horizontal + jarak bawah */
+    max-width: 320px;     /* Batas ukuran maksimum */
+    width: 100%;
     height: auto;         /* Pertahankan proporsi */
 }
 .brand-row { display: flex; align-items: center; gap: 16px; }
