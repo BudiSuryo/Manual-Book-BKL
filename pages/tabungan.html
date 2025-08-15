@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual Book Kasir - BPR</title>
+    <title>Manual Book Tabungan - BPR</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <h1>Manual Book Kasir - BPR Kreo Lestari</h1>
+        <h1>Manual Book Tabungan - BPR Kreo Lestari</h1>
         <nav class="breadcrumb">
-            <a href="../index.html">Beranda</a> &gt; <span>Kasir</span>
+            <a href="../index.html">Beranda</a> &gt; <span>Tabungan</span>
         </nav>
         <div class="search-bar">
             <input type="text" id="searchInput" placeholder="Cari kata..."><button id="searchButton">Cari</button>
@@ -20,95 +20,81 @@
     <main>
         <section id="pendahuluan">
             <h2>Pendahuluan</h2>
-            <p>Manual Book ini disusun untuk memberikan panduan lengkap kepada Kasir BPR dalam menjalankan tugas dan tanggung jawabnya sesuai standar perusahaan dan regulasi yang berlaku.</p>
+            <p>Manual Book ini memberikan panduan lengkap bagi petugas bagian Tabungan BPR dalam mengelola produk tabungan, pembukaan dan penutupan rekening, serta pelayanan administrasi sesuai dengan prosedur dan regulasi yang berlaku.</p>
         </section>
 
         <section id="jobdesc">
             <h2>I. Job Description</h2>
             <p>
-            <strong>Posisi:</strong> Kasir</br>
-            <strong>Divisi:</strong> Operasional / Teller</br>
+            <strong>Posisi:</strong> Petugas Tabungan<br/>
+            <strong>Divisi:</strong> Operasional / Funding<br/>
             <strong>Atasan Langsung:</strong> PE. Back Office / Manager Operasional
             </p>
             <h3>Tugas Utama:</h3> 
                <ol> 
-                <li>Melayani transaksi nasabah secara cepat, akurat, dan ramah.</li>
-                <li>Menangani setoran tunai, penarikan tunai, transfer, dan pembayaran lainnya.</li>
-                <li>Menyusun laporan harian kas dan memastikan saldo kas sesuai.</li>
-                <li>Menjaga keamanan dan kerahasiaan dana nasabah.</li>
-                <li>Menangani setoran/check/tranfer sesuai prosedur BPR dan regulasi OJK.</li>
+                <li>Melakukan pembukaan rekening tabungan baru sesuai prosedur.</li>
+                <li>Melayani perubahan data nasabah (alamat, kontak, ahli waris, dsb).</li>
+                <li>Memproses penutupan rekening tabungan sesuai ketentuan.</li>
+                <li>Mengelola administrasi dokumen tabungan dan arsip nasabah.</li>
+                <li>Memberikan informasi produk tabungan kepada calon nasabah.</li>
             </ol>
         </section>
 
         <section id="wewenang-tanggungjawab">
             <h2>II. Wewenang dan Tanggung Jawab</h2>
-            <h3>A. Wewenang Kasir:</h3>
+            <h3>A. Wewenang Petugas Tabungan:</h3>
             <ol>
-                <li>Menerima dan memproses transaksi nasabah sesuai limit yang ditetapkan.</li>
-                <li>Memberikan informasi dasar terkait produk simpanan dan pembayaran.</li>
-                <li>Menandatangani bukti transaksi kas sesuai ketentuan internal.</li>
-                </ol>
+                <li>Menerima dan memproses aplikasi pembukaan rekening tabungan.</li>
+                <li>Memberikan informasi resmi terkait fitur dan syarat produk tabungan.</li>
+                <li>Memverifikasi kelengkapan dokumen nasabah.</li>
+            </ol>
             <h3>B. Tanggung Jawab:</h3>
             <ol>
-                <li>Menjaga keamanan kas dan dokumen transaksi.</li>
-                <li>Melaporkan setiap ketidaksesuaian saldo atau kesalahan transaksi kepada atasan.</li>
-                <li>Mematuhi SOP internal dan peraturan OJK.</li>
+                <li>Memastikan seluruh dokumen nasabah valid dan lengkap.</li>
+                <li>Mencatat seluruh transaksi administrasi tabungan dalam sistem core banking.</li>
                 <li>Menjaga kerahasiaan data nasabah.</li>
+                <li>Melaporkan setiap temuan dokumen atau data yang mencurigakan kepada atasan.</li>
             </ol>
         </section>
 
         <section id="sop">
-            <h2>III. Standar Operasional Prosedur (SOP) Kasir</h2>
-            <h3>A. Pembukaan Kas.</h3>
+            <h2>III. Standar Operasional Prosedur (SOP) Tabungan</h2>
+
+            <h3>A. Pembukaan Rekening Tabungan</h3>
             <ol>
-                <li>Datang 15 menit sebelum jam operasional.</li>
-                <li>Melakukan pengecekan saldo awal kas harian.</li>
-                <li>Menyusun uang tunai sesuai pecahan.</li>
-                <li>Menyalakan sistem komputer dan software core banking.</li>
-                <li>Melaporkan saldo awal ke kepala cabang.</li>
+                <li>Terima formulir pembukaan rekening dari nasabah.</li>
+                <li>Verifikasi kelengkapan dokumen (KTP, NPWP jika ada, formulir aplikasi).</li>
+                <li>Input data nasabah ke sistem core banking Teradata.</li>
+                <li>Masukkan data ke sistem AppSheet untuk pelaporan internal.</li>
+                <li>Setorkan saldo awal sesuai jenis tabungan.</li>
+                <li>Berikan buku tabungan atau kartu ATM kepada nasabah.</li>
+                <li>Minta tanda tangan nasabah pada buku tabungan dan dokumen arsip.</li>
             </ol>
 
-            <h3>B. Transaksi Nasabah.</h3>
-            <p>Setoran Tunai:</p>
+            <h3>B. Perubahan Data Nasabah</h3>
             <ol>
-                <li>Verifikasi identitas nasabah (KTP / Buku Tabungan).</li>
-                <li>Hitung jumlah uang dan cek keaslian.</li>
-                <li>Masukkan ke sistem core banking Teradata.</li>
-                <li>Masukan ke sistem AppSheet.</li>
-                <li>Berikan bukti setoran kepada nasabah.</li>
-            </ol>
-            <p>Penarikan Tunai:</p>
-            <ol>
-                <li>Verifikasi identitas nasabah (KTP / Buku Tabungan).</li>
-                <li>Cek saldo nasabah.</li>
-                <li>Serahkan uang sesuai permintaan.</li>
-                <li>Masukkan ke sistem core banking Teradata.</li>
-                <li>Masukan ke sistem AppSheet.</li>
-                <li>Berikan bukti setoran kepada nasabah.</li>
-            </ol>
-            <p>Transfer Pembayaran:</p>
-            <ol>
-                <li>Pastikan identitas nasabah valid.</li>
-                <li>Input transaksi sesuai data yang diberikan.</li>
-                <li>Masukkan ke sistem core banking Teradata.</li>
-                <li>Masukan ke sistem AppSheet.</li>
-                <li>Konfirmasi dan cetak bukti transaksi.</li>
-                <li>Simpan bukti transaksi untuk arsip.</li>
+                <li>Terima permohonan perubahan data beserta dokumen pendukung (KTP baru, KK, dsb).</li>
+                <li>Verifikasi identitas dan kecocokan data.</li>
+                <li>Perbarui data di sistem core banking Teradata.</li>
+                <li>Update di sistem AppSheet untuk catatan internal.</li>
+                <li>Cetak dan serahkan bukti perubahan data kepada nasabah.</li>
             </ol>
 
-            <h3>C. Penutupan Kas.</h3>
+            <h3>C. Penutupan Rekening Tabungan</h3>
             <ol>
-                <li>Hitung saldo akhir kas dan bandingkan dengan catatan transaksi.</li>
-                <li>Rekonsiliasi setiap perbedaan.</li>
-                <li>Menyetor seluruh saldo kas akhir hari ke brankas sesuai ketentuan.</li>
-                <li>Cetak laporan kas harian (end of day report).</li>
+                <li>Terima permohonan penutupan rekening dari nasabah.</li>
+                <li>Verifikasi identitas dan saldo akhir rekening.</li>
+                <li>Lunasi saldo rekening (setelah potong biaya administrasi jika berlaku).</li>
+                <li>Tutup rekening di sistem core banking Teradata.</li>
+                <li>Update status rekening di sistem AppSheet.</li>
+                <li>Arsipkan dokumen penutupan rekening.</li>
             </ol>
 
-            <h3>D. Penanganan Masalah.</h3>
+            <h3>D. Penanganan Masalah</h3>
             <ol>
-                <li>Jika terjadi selisih kas, laporkan segera ke atasan.</li>
-                <li>Jika nasabah mengeluh, catat kronologi dan informasikan ke kepala cabang.</li>
-                <li>Selalu dokumentasikan setiap transaksi tidak biasa.</li>
+                <li>Jika ditemukan data nasabah yang tidak valid, segera laporkan kepada atasan.</li>
+                <li>Jika nasabah mengeluh, catat kronologi kejadian dan informasikan ke manajemen.</li>
+                <li>Simpan bukti setiap tindakan koreksi atau revisi data.</li>
             </ol>
         </section>
 
@@ -117,22 +103,24 @@
             <ol>
                 <li>Menggunakan seragam resmi dan nama tag.</li>
                 <li>Bersikap ramah, sopan, dan profesional.</li>
-                <li>Tidak meninggalkan kas tanpa pengawasan.</li>
-                <li>Tidak menggunakan dana kas untuk kepentingan pribadi.</li>
+                <li>Menjaga keamanan dokumen dan arsip nasabah.</li>
+                <li>Tidak memproses pembukaan rekening tanpa dokumen lengkap.</li>
             </ol>
-            
+        </section>
+
         <section id="catatan">
             <h2>V. Catatan Penting</h2>
             <p>
-                Kasir wajib menjaga kerahasiaan data nasabah, mematuhi semua regulasi OJK, dan menghindari konflik kepentingan.
-                Semua transaksi harus dicatat dan dicetak bukti. Setiap kesalahan harus dilaporkan segera.<br/>
-                Pelanggaran terhadap aturan ini akan dikenakan sanksi sesuai ketentuan perusahaan.<br/>
+                Petugas Tabungan wajib mematuhi seluruh SOP internal dan regulasi OJK.  
+                Dilarang memalsukan, mengubah, atau memanipulasi data nasabah.  
+                Semua dokumen harus diarsipkan sesuai jadwal retensi perusahaan.  
+                Pelanggaran akan dikenakan sanksi sesuai ketentuan perusahaan.
             </p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 BPR - Manual Book Kasir</p>
+        <p>&copy; 2025 BPR - Manual Book Tabungan</p>
     </footer>
 </body>
 </html>
