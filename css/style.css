@@ -27,7 +27,7 @@ header {
 }
 .logo {
     display: block;       /* Biar img jadi elemen blok */
-    margin: 10px auto 0px;  /* Center horizontal + jarak bawah */
+    margin: 20px auto 0px;  /* Center horizontal + jarak bawah */
     max-width: 280px;     /* Batas ukuran maksimum */
     width: 100%;
     height: auto;         /* Pertahankan proporsi */
@@ -79,7 +79,7 @@ nav.top a {
 .list { margin: 0; padding-left: 18px; }
 .note { background: #fff7ed; border: 1px dashed #fdba74; color: #7c2d12; padding: 10px; border-radius: 12px; }
 .ok { background: #ecfdf5; border: 1px dashed #6ee7b7; color: #065f46; padding: 10px; border-radius: 12px; }
-footer { padding: 5px 0 20px 0; text-align: center; color: var(--muted); }
+footer { margin-top: 20px; padding: 5px 0 20px 0; text-align: center; color: var(--muted); }
 
 /* Spinner */
 #loading {
