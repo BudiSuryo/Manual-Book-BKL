@@ -1,1 +1,13 @@
-
+/kasir.html 200! BasicAuth kasir:passkasir
+/tabungan.html 200! BasicAuth tabungan:passtabungan
+/kolektor.html 200! BasicAuth kolektor:passkolektor
+/adm_kredit.html 200! BasicAuth adm_kredit:passadm_kredit
+/analis.html 200! BasicAuth analis:passanalis
+/audit.html 200! BasicAuth audit:passaudit
+/gm_marketing.html 200! BasicAuth gm_marketing:passgm_marketing
+/gm_ops.html 200! BasicAuth gm_ops:passgm_ops
+/hrd.html 200! BasicAuth hrd:passhrd
+/ka_back_office.html 200! BasicAuth ka_back_office:passka_back_office
+/kabag_kredit.html 200! BasicAuth kabag_kredit:passkabag_kredit
+/kacab.html 200! BasicAuth kacab:passkacab
+/legal.html 200! BasicAuth  legal:passlegal
