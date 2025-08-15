@@ -14,7 +14,7 @@
     <h2>Login Manual Book</h2>
     <form onsubmit="return validateLogin()">
       <label for="role">Pilih Bagian:</label>
-      <select id="role">
+      <select id="role" onchange="gotoPage()">
         <option value="adm_kredit">Adm Kredit</option>
         <option value="analis">Analis</option>
         <option value="audit">Audit</option>
@@ -34,6 +34,15 @@
       <input type="password" id="password" required />
       <button type="submit">Masuk</button>
     </form>
+
+      <script>
+function gotoPage() {
+  var select = document.getElementById("role");
+  var page = select.value;
+  if(page) {
+    window.location.href = page; // redirect ke halaman yang dipilih
+  }
+}
   </div>
  
   <!-- Loading Spinner -->
