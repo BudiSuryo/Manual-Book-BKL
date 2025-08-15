@@ -17,6 +17,12 @@ html, body {
   color: var(--ink);
   background: var(--bg);
 }
+.logo {
+    display: block;       /* Biar img jadi elemen blok */
+    margin: 0 auto 20px;  /* Center horizontal + jarak bawah */
+    max-width: 120px;     /* Batas ukuran maksimum */
+    height: auto;         /* Pertahankan proporsi */
+}
 .wrap { max-width: 1100px; margin: 0 auto; padding: 24px; }
 header {
   background: linear-gradient(135deg, var(--brand), var(--brand-2));
@@ -187,11 +193,5 @@ button:hover {
   box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.2);
 }
 
-.logo {
-    display: block;       /* Biar img jadi elemen blok */
-    margin: 0 auto 20px;  /* Center horizontal + jarak bawah */
-    max-width: 120px;     /* Batas ukuran maksimum */
-    height: auto;         /* Pertahankan proporsi */
-}
 
 
