@@ -16,35 +16,26 @@
     <h2>Login Manual Book</h2>
     <form onsubmit="return validateLogin()">
       <label for="role">Pilih Bagian:</label>
-      <select id="role" onchange="gotoPage()">
-        <option value="adm_kredit">Adm Kredit</option>
-        <option value="analis">Analis</option>
-        <option value="audit">Audit</option>
-        <option value="kasir">Kasir</option>
-        <option value="tabungan">Tabungan</option>
-        <option value="kolektor">Kolektor</option>
-        <option value="legal">Legal</option>
-        <option value="kacab">Kepala Cabang</option>
-        <option value="hrd">HRD</option>
-        <option value="kabag_kredit">Kabag Kredit</option>
-        <option value="ka_back_office">Kabag Operasional</option>
-        <option value="gm_marketing">GM Marketing</option>
-        <option value="gm_ops">GM Operasional</option>
+      <select id="role">
+        <option value="adm_kredit.html">Adm Kredit</option>
+        <option value="analis.html">Analis</option>
+        <option value="audit.html">Audit</option>
+        <option value="kasir.html">Kasir</option>
+        <option value="tabungan.html">Tabungan</option>
+        <option value="kolektor.html">Kolektor</option>
+        <option value="legal.html">Legal</option>
+        <option value="kacab.html">Kepala Cabang</option>
+        <option value="hrd.html">HRD</option>
+        <option value="kabag_kredit.html">Kabag Kredit</option>
+        <option value="ka_back_office.html">Kabag Operasional</option>
+        <option value="gm_marketing.html">GM Marketing</option>
+        <option value="gm_ops.html">GM Operasional</option>
        
       </select>
       <label for="password">Password:</label>
       <input type="password" id="password" required />
       <button type="submit">Masuk</button>
     </form>
-
-      <script>
-function gotoPage() {
-  var select = document.getElementById("role");
-  var page = select.value;
-  if(page) {
-    window.location.href = page; // redirect ke halaman yang dipilih
-  }
-}</script>
   </div>
  
   <!-- Loading Spinner -->
@@ -55,6 +46,14 @@ function gotoPage() {
 <div id="errorBox" class="error-box" style="display:none;">
   <p id="errorMessage"></p>
 </div>
+      <script>
+function gotoPage() {
+  var select = document.getElementById("role");
+  var page = select.value;
+  if(page) {
+    window.location.href = page; // redirect ke halaman yang dipilih
+  }
+}</script>
 <script src="js/script.js" defer></script>  
  <footer>
         <p>&copy; 2025 BPR Kreo Lestari- Manual Book</p>
