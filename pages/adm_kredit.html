@@ -6,22 +6,10 @@
     <title>Manual Book Administrasi Kredit - BPR</title>
     <link rel="stylesheet" href="css/style.css">
      <script>
-    // Matikan spinner kalau ada
-function hideLoading() {
-    let loading = document.getElementById("loading");
-    if (loading) loading.style.display = "none";
-}
-
-// Proteksi halaman (jalankan secepat mungkin)
-if (sessionStorage.getItem("isLoggedIn") !== "true") {
-    hideLoading(); // pastikan spinner dimatikan sebelum redirect
-    window.location.href = "index.html";
-}
-
-// Tangani saat halaman kembali dari cache (tombol back/forward)
-window.addEventListener("pageshow", function(event) {
-    hideLoading();
-});
+     // Proteksi halaman (jalankan secepat mungkin sebelum konten ditampilkan)
+    if (sessionStorage.getItem("isLoggedIn") !== "true") {
+        window.location.href = "index.html";
+    }
   </script>
 </head>
 <body>
@@ -135,5 +123,6 @@ window.addEventListener("pageshow", function(event) {
     </footer>
 </body>
 </html>
+
 
 
