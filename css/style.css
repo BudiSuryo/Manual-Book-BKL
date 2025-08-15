@@ -122,17 +122,6 @@ footer { padding: 22px 0 40px 0; text-align: center; color: var(--muted); }
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-header img {
-    display: block;
-    margin: 0 auto;
-}
-
-.logo {
-            width: 200px;
-            height: auto;
-            margin-bottom: 0px;
-        }
-
 h2 {
   text-align: center;
   margin-bottom: 20px;
@@ -196,6 +185,13 @@ button:hover {
 .search-box:focus {
   border-color: #0078D4;
   box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.2);
+}
+
+.logo {
+    display: block;       /* Biar img jadi elemen blok */
+    margin: 0 auto 20px;  /* Center horizontal + jarak bawah */
+    max-width: 120px;     /* Batas ukuran maksimum */
+    height: auto;         /* Pertahankan proporsi */
 }
 
 
