@@ -1,23 +1,31 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const searchButton = document.getElementById("searchButton");
-    const searchInput = document.getElementById("searchInput");
+    const headingDropdown = document.getElementById("headingDropdown");
+    const headings = document.querySelectorAll("#textContent h3");
 
-    searchButton.addEventListener("click", function () {
-        let input = searchInput.value.trim();
-        if (!input) return;
+    // 🔹 Buat opsi dropdown otomatis dari setiap <h3>
+    headings.forEach(h3 => {
+        let option = document.createElement("option");
+        option.value = h3.id;
+        option.textContent = h3.textContent;
+        headingDropdown.appendChild(option);
+    });
 
-        // Ambil semua <section> di dalam #textContent
-        const sections = document.querySelectorAll("#textContent section");
+    // 🔹 Saat dropdown berubah
+    headingDropdown.addEventListener("change", function () {
+        let selected = headingDropdown.value;
 
-        sections.forEach(section => {
-            // Hapus highlight lama
-            let cleanText = section.innerHTML.replace(/<span class="highlight">(.*?)<\/span>/gi, "$1");
+        headings.forEach(h3 => {
+            let section = h3.closest("section");
+            section.style.display = "block";
+            section.classList.remove("highlight");
 
-            // Buat regex pencarian (case-insensitive)
-            let regex = new RegExp("(" + input + ")", "gi");
+            if (selected && h3.id !== selected) {
+                section.style.display = "none";
+            }
 
-            // Tambahkan highlight hanya di dalam section
-            section.innerHTML = cleanText.replace(regex, '<span class="highlight">$1</span>');
+            if (selected && h3.id === selected) {
+                section.classList.add("highlight");
+            }
         });
     });
 });
