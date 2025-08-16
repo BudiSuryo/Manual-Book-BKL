@@ -20,11 +20,12 @@ html, body {
 }
 .wrap { max-width: 1100px; margin: 0 auto; padding: 24px; }
 header {
-  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  background-color: #7ec8e3; /* biru muda solid */
   color: #fff;
   padding: 28px 0;
   margin-bottom: 18px;
-  border-bottom: 4px solid var(--accent);
+  border: 2px solid #3498db; /* border biru agak gelap */
+  border-radius: 8px; /* opsional, biar sudut sedikit membulat */
 }
 .logo {
     display: block;       /* Biar img jadi elemen blok */
