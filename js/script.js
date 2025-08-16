@@ -1,31 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const headingDropdown = document.getElementById("headingDropdown");
+    const dropdown = document.getElementById("headingDropdown");
     const headings = document.querySelectorAll("#textContent h3");
 
-    // 🔹 Buat opsi dropdown otomatis dari setiap <h3>
-    headings.forEach(h3 => {
-        let option = document.createElement("option");
-        option.value = h3.id;
-        option.textContent = h3.textContent;
-        headingDropdown.appendChild(option);
+    headings.forEach((heading, index) => {
+        // kalau <h3> belum ada id, buat otomatis
+        if (!heading.id) {
+            heading.id = "heading-" + (index + 1);
+        }
+
+        // buat <option> untuk dropdown
+        const option = document.createElement("option");
+        option.value = heading.id;
+        option.textContent = heading.textContent;
+        dropdown.appendChild(option);
     });
 
-    // 🔹 Saat dropdown berubah
-    headingDropdown.addEventListener("change", function () {
-        let selected = headingDropdown.value;
-
-        headings.forEach(h3 => {
-            let section = h3.closest("section");
-            section.style.display = "block";
-            section.classList.remove("highlight");
-
-            if (selected && h3.id !== selected) {
-                section.style.display = "none";
-            }
-
-            if (selected && h3.id === selected) {
-                section.classList.add("highlight");
-            }
-        });
+    // ketika user pilih heading, langsung scroll
+    dropdown.addEventListener("change", function () {
+        const selectedId = this.value;
+        if (selectedId) {
+            document.getElementById(selectedId).scrollIntoView({
+                behavior: "smooth"
+            });
+        }
     });
 });
