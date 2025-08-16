@@ -1,30 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
     const searchButton = document.getElementById("searchButton");
     const searchInput = document.getElementById("searchInput");
-    const textContent = document.getElementById("textContent");
-
-    function escapeRegExp(string) {
-        return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // escape karakter regex
-    }
 
     searchButton.addEventListener("click", function () {
         let input = searchInput.value.trim();
-        let content = textContent.innerHTML;
+        if (!input) return;
 
-        if (input) {
+        // Ambil semua <section> di dalam #textContent
+        const sections = document.querySelectorAll("#textContent section");
+
+        sections.forEach(section => {
             // Hapus highlight lama
-            let cleanText = content.replace(/<span class="highlight">(.*?)<\/span>/gi, "$1");
+            let cleanText = section.innerHTML.replace(/<span class="highlight">(.*?)<\/span>/gi, "$1");
 
-            // Escape dulu input biar aman
-            let safeInput = escapeRegExp(input);
+            // Buat regex pencarian (case-insensitive)
+            let regex = new RegExp("(" + input + ")", "gi");
 
-            // Regex pencarian (case-insensitive)
-            let regex = new RegExp("(" + safeInput + ")", "gi");
-
-            // Tambahkan highlight
-            let newText = cleanText.replace(regex, '<span class="highlight">$1</span>');
-
-            textContent.innerHTML = newText;
-        }
+            // Tambahkan highlight hanya di dalam section
+            section.innerHTML = cleanText.replace(regex, '<span class="highlight">$1</span>');
+        });
     });
 });
