@@ -15,7 +15,7 @@ function scrollToHeading(selectedId) {
       // opsional: hilangkan highlight setelah beberapa detik
       setTimeout(() => {
         target.classList.remove("highlight");
-      }, 2000); // 2 detik
+      }, 5000); // 5 detik
     }
   }
 }
