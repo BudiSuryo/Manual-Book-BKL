@@ -1,12 +1,10 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const dropdown = document.getElementById("headingDropdown");
-
-  dropdown.addEventListener("change", function () {
-    const selectedId = this.value;
-    if (selectedId) {
-      document.getElementById(selectedId).scrollIntoView({
+function scrollToHeading(selectedId) {
+  if (selectedId) {
+    const target = document.getElementById(selectedId);
+    if (target) {
+      target.scrollIntoView({
         behavior: "smooth"
       });
     }
-  });
-});
+  }
+}
