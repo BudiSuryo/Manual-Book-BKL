@@ -194,3 +194,10 @@ button:hover {
   border-color: #0078D4;
   box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.2);
 }
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
