@@ -14,7 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
         option.textContent = heading.textContent;
         dropdown.appendChild(option);
     });
-
+        else {
+        console.warn("⚠️ Dropdown atau h3 tidak ditemukan");
+    }
     // ketika user pilih heading, langsung scroll
     dropdown.addEventListener("change", function () {
         const selectedId = this.value;
@@ -25,3 +27,4 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
