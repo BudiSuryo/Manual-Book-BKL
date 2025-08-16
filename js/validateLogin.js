@@ -12,7 +12,8 @@ const passwords = {
     "pages/ka_back_office.html": "1234",
     "pages/kabag_kredit.html": "1234",
     "pages/kacab.html": "1234",
-    "pages/legal.html": "1234"
+    "pages/legal.html": "1234",
+    "pages/untukteshtml.html": "1111"
 };
 
 function validateLogin() {
