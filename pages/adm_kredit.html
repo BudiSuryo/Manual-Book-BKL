@@ -21,9 +21,15 @@
             <a href="../index.html">Beranda</a> &gt; <span>Administrasi Kredit</span>
         </nav>
         <div class="search-bar">
-    <select id="headingDropdown">
-        <option value="">-- Pilih Heading --</option>
-        <!-- nanti diisi otomatis dengan judul h3 -->
+    <select id="headingDropdown" onchange="scrollToHeading(this.value)">
+    <option value="">-- Pilih Heading --</option>
+    <option value="h-1">Tugas Utama</option>
+    <option value="h-2">Wewenang</option>
+    <option value="h-3">Tanggung Jawab</option> 
+    <option value="h-4">A. Penerimaan Dokumen Kredit</option>
+    <option value="h-5">B. Pembuatan Akad Kredit</option>
+    <option value="h-6">C. Pencairan Kredit</option>
+    <option value="h-7">D. Pengarsipan Dokumen</option>       
     </select>
 </div>
 
@@ -34,7 +40,7 @@
             <h2>Pendahuluan</h2>
             <p>Manual Book ini memberikan panduan lengkap bagi petugas Administrasi Kredit dalam mengelola seluruh proses administrasi pembiayaan, mulai dari penerimaan dokumen, pencatatan, pembuatan perjanjian, pencairan, hingga pengarsipan sesuai ketentuan BPR dan peraturan OJK.</p>
         </section>
-        <div id="textContent">
+        <div>
         <section id="jobdesc">
             <h2>I. Job Description</h2>
             <p>
@@ -42,7 +48,7 @@
                 <strong>Divisi:</strong> Kredit / Pembiayaan<br/>
                 <strong>Atasan Langsung:</strong> Kepala Bagian Kredit / Manager Operasional
             </p>
-            <h3>Tugas Utama:</h3>
+            <h3 id="h-1">Tugas Utama:</h3>
             <ol>
                 <li>Menerima dan memeriksa kelengkapan dokumen kredit dari analis atau marketing.</li>
                 <li>Mencatat dokumen ke dalam register kredit atau sistem core banking.</li>
@@ -54,13 +60,13 @@
 
         <section id="wewenang-tanggungjawab">
             <h2>II. Wewenang dan Tanggung Jawab</h2>
-            <h3>A. Wewenang Administrasi Kredit:</h3>
+            <h3 id="h-2">A. Wewenang Administrasi Kredit:</h3>
             <ol>
                 <li>Menolak dokumen yang tidak lengkap atau tidak sah.</li>
                 <li>Menentukan jadwal pencairan sesuai kesiapan dokumen.</li>
                 <li>Menentukan metode pengarsipan dokumen.</li>
             </ol>
-            <h3>B. Tanggung Jawab:</h3>
+            <h3 id="h-3">B. Tanggung Jawab:</h3>
             <ol>
                 <li>Memastikan seluruh dokumen kredit valid dan lengkap.</li>
                 <li>Menjaga kerahasiaan dokumen nasabah.</li>
@@ -72,7 +78,7 @@
         <section id="sop">
             <h2>III. Standar Operasional Prosedur (SOP) Administrasi Kredit</h2>
 
-            <h3>A. Penerimaan Dokumen Kredit</h3>
+            <h3 id="h-4">A. Penerimaan Dokumen Kredit</h3>
             <ol>
                 <li>Menerima dokumen dari analis/marketing.</li>
                 <li>Memeriksa kelengkapan dan keaslian dokumen sesuai checklist.</li>
@@ -80,7 +86,7 @@
                 <li>Mengembalikan dokumen yang tidak lengkap untuk dilengkapi.</li>
             </ol>
 
-            <h3>B. Pembuatan Akad Kredit</h3>
+            <h3 id="h-5">B. Pembuatan Akad Kredit</h3>
             <ol>
                 <li>Menyusun perjanjian kredit sesuai keputusan komite.</li>
                 <li>Menyiapkan dokumen pendukung seperti surat kuasa, SKMHT, atau APHT.</li>
@@ -88,14 +94,14 @@
                 <li>Menyimpan satu rangkap dokumen di arsip.</li>
             </ol>
 
-            <h3>C. Pencairan Kredit</h3>
+            <h3 id="h-6">C. Pencairan Kredit</h3>
             <ol>
                 <li>Melakukan verifikasi akhir dokumen.</li>
                 <li>Menginput data pencairan ke sistem.</li>
                 <li>Berkoordinasi dengan kasir untuk pencairan dana.</li>
             </ol>
 
-            <h3>D. Pengarsipan Dokumen</h3>
+            <h3 id="h-7">D. Pengarsipan Dokumen</h3>
             <ol>
                 <li>Memisahkan dokumen asli dan salinan.</li>
                 <li>Menyimpan dokumen asli di lemari arsip terkunci.</li>
@@ -129,6 +135,7 @@
     </footer>
 </body>
 </html>
+
 
 
 
