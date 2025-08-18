@@ -27,7 +27,7 @@ header {
 }
 .logo {
     display: block;       /* Biar img jadi elemen blok */
-    margin: 20px auto 0px;  /* Center horizontal + jarak bawah */
+    margin: 10px auto 10px;  /* Center horizontal + jarak bawah */
     max-width: 120px;     /* Batas ukuran maksimum */
     width: 100%;
     height: auto;         /* Pertahankan proporsi */
