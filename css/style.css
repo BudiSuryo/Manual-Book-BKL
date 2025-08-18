@@ -1,4 +1,4 @@
-/* ====== style.css ====== */
+e/* ====== style.css ====== */
 :root {
   --brand: #0a3d62;
   --brand-2: #3c6382;
@@ -55,7 +55,7 @@ nav.top a {
 
 .grid { display: grid; grid-template-columns: 280px 1fr; gap: 16px; }
 @media (max-width: 920px) { .grid { grid-template-columns: 1fr; } }
-.side { position: sticky; top: 14px; align-self: start; }
+.side { position: relative; align-self: flex-start; }
 .card { background: var(--card); border: 1px solid #e5e7eb; border-radius: var(--radius); padding: 14px; }
 .side h3 { margin: 6px 0 10px 0; font-size: 14px; text-transform: uppercase; color: var(--muted); letter-spacing: .08em; }
 .toc { display: flex; flex-direction: column; gap: 6px; }
