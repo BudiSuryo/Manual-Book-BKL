@@ -13,20 +13,37 @@
   </script>
 </head>
 <body>
+<div class="wrap">
+    <!-- HEADER -->    
     <header>
-        <h1>Manual Book Bagian Internal Audit - BPR Kreo Lestari</h1>
-        <nav class="breadcrumb">
-            <a href="../index.html">Beranda</a> &gt; <span>Bagian Internal Audit</span>
-        </nav>
-        <div class="search-bar">
-  <select id="headingDropdown" onchange="scrollToHeading(this.value)">
-    <option value="">-- Daftar Isi --</option>
-  </select>
-</div>
-
+      <img src="../logo2.png" alt="Logo" class="logo">
+      <div class="brand-row">
+          <div class="title">
+          <h1>Manual Book Administrasi Kredit</h1>
+          <div class="sub">BPR Kreo Lestari</div>
+        </div>
+      </div>
+      <nav class="top">
+        <div class="breadcrumb">
+          <a href="../index.html">Beranda</a> &gt;
+          <a href="#">Administrasi Kredit</a>
+        </div>
+      </nav>
     </header>
 
-    <main>
+    <!-- DROPDOWN NAV -->
+    <div class="search-bar">
+      <select id="headingDropdown" onchange="scrollToHeading(this.value)">
+        <option value="">-- Daftar Isi --</option>
+      </select>
+    </div>
+
+  <!-- GRID 3 KOLOM -->
+  <div class="grid-3col">
+    <!-- KOLOM KIRI (aksen warna / kosong) -->
+    <aside class="accent"></aside>
+      
+    <main class="content">
         <section id="pendahuluan">
             <h2>Pendahuluan</h2>
             <p>
@@ -126,6 +143,11 @@
         </section>
     </main>
 
+    <!-- KOLOM KANAN (aksen warna / kosong) -->
+    <aside class="accent"></aside>
+  </div>
+
+  <!-- FOOTER -->
     <footer>
         <p>&copy; 2025 BPR - Manual Book Bagian Internal Audit</p>
     </footer>
@@ -133,6 +155,7 @@
 </html>
 
 <script src="/js/script2.js" defer></script>
+
 
 
 
