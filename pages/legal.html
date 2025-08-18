@@ -1,136 +1,206 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual Book Bagian Legal - BPR</title>
-    <link rel="stylesheet" href="css/style.css">
-	 <script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manual Book Bagian Legal - BPR</title>
+  <link rel="stylesheet" href="/css/style.css" />
+
+  <script>
     // Proteksi halaman (jalankan secepat mungkin sebelum konten ditampilkan)
     if (sessionStorage.getItem("isLoggedIn") !== "true") {
-        window.location.href = "index.html";
+      window.location.href = "index.html";
     }
   </script>
 </head>
 <body>
+  <div class="wrap">
+    <!-- HEADER -->
     <header>
-        <h1>Manual Book Bagian Legal - BPR Kreo Lestari</h1>
-        <nav class="breadcrumb">
-            <a href="../index.html">Beranda</a> &gt; <span>Bagian Legal</span>
-        </nav>
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Cari kata...">
-            <button id="searchButton">Cari</button>
+      <img src="../logo2.png" alt="Logo" class="logo">
+      <div class="brand-row">
+        <div class="title">
+          <h1>Manual Book Legal</h1>
+          <div class="sub">BPR Kreo Lestari</div>
         </div>
+      </div>
+      <nav class="top">
+        <div class="breadcrumb">
+          <a href="../index.html">Beranda</a> &gt;
+          <a href="#">Legal</a>
+        </div>
+      </nav>
     </header>
 
-    <main>
-        <section id="pendahuluan">
-            <h2>Pendahuluan</h2>
-            <p>
-                Manual Book ini memberikan panduan bagi Bagian Legal dalam memastikan seluruh aktivitas dan dokumen 
-                BPR berjalan sesuai hukum yang berlaku, regulasi OJK, dan kebijakan internal perusahaan, 
-                serta memberikan dukungan hukum dalam pengambilan keputusan manajemen.
-            </p>
-        </section>
+    <!-- DROPDOWN NAV (auto-isi dari semua <h3 id="..."> di .content) -->
+    <div class="search-bar">
+      <select id="headingDropdown" onchange="scrollToHeading(this.value)">
+        <option value="">-- Daftar Isi --</option>
+      </select>
+    </div>
+  </div>
 
-        <section id="jobdesc">
-            <h2>I. Job Description</h2>
-            <p>
-                <strong>Posisi:</strong> Bagian Legal<br/>
-                <strong>Divisi:</strong> Legal<br/>
-                <strong>Atasan Langsung:</strong> General Manager / Direktur Utama
-            </p>
-            <h3>Tugas Utama:</h3>
-            <ol>
-                <li>Memastikan seluruh dokumen dan perjanjian BPR sesuai hukum dan regulasi yang berlaku.</li>
-				<li>Memberikan opini dan saran hukum kepada manajemen.</li>
-				<li>Mengelola administrasi legal, termasuk arsip dokumen penting perusahaan.</li>
-				<li>Menangani permasalahan hukum yang timbul dari kegiatan operasional BPR.</li>
-				<li>Melakukan koordinasi dengan pihak eksternal terkait masalah hukum.</li>
-				<li>Menangani penanganan hukum nasabah bermasalah, termasuk mediasi dan litigasi.</li>
-				<li>Mengurus proses lelang agunan yang diambil alih melalui KPKNL.</li>
-				<li>Melakukan pengurusan akta, perjanjian, dan legalisasi dokumen melalui notaris.</li>
-			</ol>
-        </section>
+  <!-- GRID 3 KOLOM -->
+  <div class="grid-3col">
+    <!-- KOLOM KIRI (aksen warna / kosong) -->
+    <aside class="accent"></aside>
 
-        <section id="wewenang-tanggungjawab">
-            <h2>II. Wewenang dan Tanggung Jawab</h2>
-            <h3>A. Wewenang:</h3>
-            <ol>
-                <li>Memberikan rekomendasi hukum terhadap kebijakan dan perjanjian.</li>
-                <li>Menyetujui kelengkapan dokumen hukum sebelum digunakan.</li>
-                <li>Berkoordinasi langsung dengan pihak berwenang terkait masalah hukum.</li>
-            </ol>
-            <h3>B. Tanggung Jawab:</h3>
-            <ol>
-                <li>Menjamin seluruh kegiatan BPR sesuai hukum dan regulasi.</li>
-                <li>Melindungi kepentingan hukum perusahaan dalam setiap transaksi.</li>
-                <li>Menjaga kerahasiaan dokumen dan informasi hukum.</li>
-            </ol>
-        </section>
+    <!-- KONTEN UTAMA -->
+    <main class="content">
+      <section id="pendahuluan">
+        <h2>Pendahuluan</h2>
+        <p>
+          Manual Book ini menjadi acuan kerja bagi Bagian Legal dalam mendukung proses pembiayaan di BPR, meliputi
+          verifikasi & keabsahan dokumen hukum, validasi jaminan, penyusunan dan review perjanjian, pendampingan akad,
+          serta pengarsipan legal sesuai ketentuan internal dan regulasi yang berlaku.
+        </p>
+      </section>
 
-        <section id="sop">
-             <h2>III. Standar Operasional Prosedur (SOP)</h2>
+      <section id="jobdesc">
+        <h2>I. Job Description</h2>
+        <p>
+          <strong>Posisi:</strong> Legal Officer / Legal Staff<br/>
+          <strong>Divisi:</strong> Legal & Compliance<br/>
+          <strong>Atasan Langsung:</strong> Kepala Bagian Legal / Manager Operasional
+        </p>
 
-    <h3>A. Peninjauan Dokumen</h3>
-    <ol>
-        <li>Memeriksa kelengkapan dan keabsahan dokumen sebelum penandatanganan.</li>
-        <li>Memberikan catatan revisi atau perbaikan jika diperlukan.</li>
-    </ol>
+        <h3 id="h1">Tugas Utama</h3>
+        <ol>
+          <li>Memeriksa keabsahan dan kelengkapan dokumen hukum calon debitur dan pihak terkait.</li>
+          <li>Melakukan validasi legalitas jaminan/agunan (tanah/bangunan, kendaraan, piutang, dsb).</li>
+          <li>Menyusun dan menelaah perjanjian kredit serta dokumen pengikatan jaminan.</li>
+          <li>Mendampingi proses penandatanganan akad kredit dan pengikatan jaminan.</li>
+          <li>Menjaga kepatuhan proses legal terhadap kebijakan internal dan regulasi.</li>
+		  <li>Menangani permasalahan hukum yang timbul baik dari kegiatan operasional BPR maupun nasabah bermasalah.</li>		
+          <li>Mengelola dokumentasi & arsip legal secara aman dan sistematis.</li>
+        </ol>
+      </section>
 
-    <h3>B. Penanganan Sengketa</h3>
-    <ol>
-        <li>Menganalisis kasus hukum yang terjadi.</li>
-        <li>Menentukan langkah hukum yang akan diambil, termasuk mediasi atau litigasi.</li>
-    </ol>
+      <section id="wewenang-tanggungjawab">
+        <h2>II. Wewenang dan Tanggung Jawab</h2>
 
-    <h3>C. Penanganan Kredit Bermasalah dan Lelang Agunan</h3>
-    <ol>
-        <li>Menerima dan memverifikasi data kredit bermasalah dari bagian kredit.</li>
-        <li>Melakukan kajian hukum terhadap langkah penyelesaian yang akan diambil.</li>
-        <li>Menyiapkan berkas dan dokumen pendukung untuk proses lelang di KPKNL.</li>
-        <li>Berkoordinasi dengan notaris untuk pembuatan akta, perjanjian, dan legalisasi dokumen terkait.</li>
+        <h3 id="h2">Wewenang</h3>
+        <ol>
+          <li>Menolak dokumen yang tidak sah, tidak lengkap, atau berisiko hukum.</li>
+          <li>Memberikan opini/rekomendasi hukum atas skema perjanjian & pengikatan jaminan.</li>
+          <li>Merekomendasikan perbaikan klausul perjanjian untuk melindungi kepentingan bank.</li>
+        </ol>
+
+        <h3 id="h3">Tanggung Jawab</h3>
+        <ol>
+          <li>Memastikan kepatuhan dokumen legal dengan hukum/regulasi yang berlaku.</li>
+          <li>Menjamin validitas, prioritas hak, dan keterikatan agunan yang memadai.</li>
+          <li>Menyampaikan temuan/risiko hukum kepada manajemen untuk mitigasi.</li>
+          <li>Menjaga kerahasiaan dan integritas dokumen legal.</li>
+        </ol>
+      </section>
+
+      <section id="sop">
+        <h2>III. Standar Operasional Prosedur (SOP) Legal</h2>
+
+        <h3 id="h4">A. Pemeriksaan Dokumen Hukum</h3>
+        <ol>
+          <li>Memverifikasi identitas pihak terkait (KTP, KK, NPWP) dan kecocokan data.</li>
+          <li>Memeriksa legalitas usaha (Akta/AD-ART, perubahan, NIB, SIUP/OSS, TDP/NIB, izin operasional bila relevan).</li>
+          <li>Memastikan tidak ada pembatasan hukum: kuasa, pailit/PKPU, sita/blokir, atau sengketa aktif.</li>
+          <li>Mencatat hasil pemeriksaan pada checklist/legal review form dan mengarsipkan buktinya.</li>
+        </ol>
+
+        <h3 id="h5">B. Validasi Agunan & Jaminan</h3>
+        <ol>
+          <li><strong>Tanah/Bangunan:</strong> cek sertifikat (SHM/HGB/Hak Pakai), peta bidang, IMB/PBG (jika ada), PBB & bukti bayar; lakukan penelusuran ke BPN (status, blokir/sita, riwayat) sesuai prosedur.</li>
+          <li><strong>Kendaraan:</strong> cek BPKB/STNK, kesesuaian nomor rangka/mesin; konfirmasi status ke samsat/biro jasa resmi bila diperlukan.</li>
+          <li><strong>Jaminan bergerak lain:</strong> stok/inventori, piutang, deposito—pastikan bukti kepemilikan & pengikatan yang dapat dieksekusi.</li>
+          <li>Review appraisal (internal/eksternal) untuk kecukupan nilai dan likuiditas agunan.</li>
+        </ol>
+
+        <h3 id="h6">C. Drafting & Review Perjanjian</h3>
+        <ol>
+          <li>Menyusun draf perjanjian kredit: objek, jumlah, suku bunga/imbal hasil, jangka waktu, kewajiban, peristiwa wanprestasi, sanksi, dan penyelesaian sengketa.</li>
+          <li>Menyusun dokumen pengikatan jaminan (contoh: SKMHT/APHT, Fidusia, Gadai, Cessie) sesuai skema & jenis agunan.</li>
+          <li>Menelaah klausul-klausul material (cross default, negative pledge, insurance assignment, covenant finansial dan non-finansial).</li>
+          <li>Menyesuaikan klausul pada kondisi khusus (joint borrower, PT/CV, perwalian, harta bersama, waris, dsb.).</li>
+        </ol>
+
+        <h3 id="h7">D. Pendampingan Proses Akad</h3>
+        <ol>
+          <li>Menyiapkan berkas final: perjanjian kredit, lampiran, kuasa, dan dokumen pengikatan jaminan.</li>
+          <li>Menjelaskan pokok-pokok perjanjian kepada debitur/penjamin; memastikan para pihak memahami hak & kewajibannya.</li>
+          <li>Menghadirkan/koordinasi dengan notaris (bila diperlukan) untuk pengikatan yang wajib akta otentik.</li>
+          <li>Memastikan tanda tangan para pihak sesuai specimen dan disertai paraf pada setiap halaman sesuai kebijakan.</li>
+        </ol>
+
+        <h3 id="h8">E. Penanganan Permasalahan Hukum Lainnya</h3>
+    	<ol>
+    	<li>Melakukan kajian hukum terhadap langkah penyelesaian yang akan diambil.</li>
+     	<li>Menyiapkan berkas dan dokumen pendukung untuk proses hukum selanjutnya.</li>
+     	<li>Berkoordinasi dengan notaris serta instansi hukum seperti kepolisian, pengadilan, kejaksaan, dan kementerian terkait guna memastikan kelengkapan dan keabsahan dokumen.</li>
 		<li>Memberikan pendampingan hukum pada seluruh proses.</li>
-        <li>Melaksanakan proses hingga selesai dan melaporkan hasilnya kepada manajemen.</li>
-    </ol>
+       	</ol>
+		  
+		<h3 id="h9">F. Dokumentasi & Arsip Legal</h3>
+        <ol>
+          <li>Melakukan registrasi dokumen (nomor, tanggal, para pihak, objek jaminan) pada sistem internal.</li>
+          <li>Melakukan proses pendaftaran APHT/Balik Nama/Hak Tanggungan di BPN dan Fidusia via e-Register bila relevan.</li>
+          <li>Menyimpan dokumen asli pada media/lemari arsip terkunci; membuat salinan digital terindeks.</li>
+          <li>Melakukan kontrol akses dan penelusuran (log) peminjaman/keluar-masuk dokumen.</li>
+        </ol>
+      </section>
 
-    <h3>D. Kepatuhan Regulasi</h3>
-    <ol>
-        <li>Memastikan BPR mematuhi semua regulasi OJK dan perundang-undangan yang berlaku.</li>
-        <li>Memberikan laporan kepatuhan hukum secara berkala.</li>
-    </ol>
+      <section id="perilaku-kerja">
+        <h2>IV. Aturan dan Perilaku Kerja</h2>
+        <ol>
+          <li>Menjunjung integritas, objektivitas, dan independensi dalam memberikan opini hukum.</li>
+          <li>Mematuhi kebijakan internal, standar profesional, serta regulasi yang berlaku.</li>
+          <li>Menjaga kerahasiaan data/dokumen dan menghindari konflik kepentingan.</li>
+          <li>Melakukan peningkatan kompetensi (pembaharuan regulasi, workshop, sertifikasi) secara berkala.</li>
+        </ol>
+      </section>
 
-    <h3>E. Pelaporan</h3>
-    <ol>
-        <li>Menyusun laporan perkembangan masalah hukum kepada manajemen.</li>
-        <li>Merekomendasikan solusi hukum untuk menghindari potensi masalah di masa depan.</li>
-    </ol>
-</section>
-
-        <section id="perilaku-kerja">
-            <h2>IV. Aturan dan Perilaku Kerja</h2>
-            <ol>
-                <li>Bertindak profesional, jujur, dan objektif dalam memberikan opini hukum.</li>
-                <li>Menjaga kerahasiaan semua dokumen dan informasi terkait hukum.</li>
-                <li>Mematuhi kode etik profesi hukum dan kebijakan perusahaan.</li>
-                <li>Mengutamakan kepentingan perusahaan sesuai hukum yang berlaku.</li>
-            </ol>
-        </section>
-
-        <section id="catatan">
-            <h2>V. Catatan Penting</h2>
-            <p>
-                Bagian Legal memegang peranan penting dalam melindungi BPR dari risiko hukum. 
-                Setiap pelanggaran atau kelalaian dalam tugas dapat berdampak serius terhadap operasional dan reputasi perusahaan.
-                Oleh karena itu, setiap prosedur hukum wajib dilaksanakan dengan teliti dan tepat waktu.
-            </p>
-        </section>
+      <section id="catatan">
+        <h2>V. Catatan Penting</h2>
+        <p>
+          Bagian Legal memastikan seluruh proses pembiayaan terlindungi secara hukum, menekan risiko sengketa,
+          dan menjaga kepatuhan regulasi. Setiap deviasi prosedur harus mendapat persetujuan otoritas internal
+          yang berwenang serta terdokumentasi dengan baik.
+        </p>
+      </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 BPR - Manual Book Bagian Legal</p>
-    </footer>
+    <!-- KOLOM KANAN (aksen warna / kosong) -->
+    <aside class="accent"></aside>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 BPR - Manual Book Bagian Legal</p>
+  </footer>
+
+  <!-- Loader otomatis: coba /js/script2.js, jika gagal fallback ke /js/script.js -->
+  <script>
+    (function () {
+      function loadScript(src, onSuccess, onError) {
+        const s = document.createElement("script");
+        s.src = src;
+        s.defer = true;
+        s.onload = onSuccess;
+        s.onerror = onError;
+        document.head.appendChild(s);
+      }
+
+      // Coba muat script2.js lebih dulu (berisi: auto-TOC + scrollToHeading + highlight)
+      loadScript("/js/script2.js",
+        function () {
+          console.log("✅ script2.js berhasil dimuat");
+        },
+        function () {
+          console.warn("⚠️ script2.js tidak ditemukan, fallback ke script.js");
+          loadScript("/js/script.js", function () {
+            console.log("✅ script.js berhasil dimuat sebagai fallback");
+          });
+        }
+      );
+    })();
+  </script>
 </body>
 </html>
-
