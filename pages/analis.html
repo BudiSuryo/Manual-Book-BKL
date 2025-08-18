@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual Book Analis - BPR</title>
+    <title>Manual Book Analis Kredit- BPR</title>
     <link rel="stylesheet" href="css/style.css">
-     <script>
+    
+    <script>
     // Proteksi halaman (jalankan secepat mungkin sebelum konten ditampilkan)
     if (sessionStorage.getItem("isLoggedIn") !== "true") {
         window.location.href = "index.html";
@@ -13,16 +14,47 @@
   </script>
 </head>
 <body>
+    <div class="wrap">
+    <!-- HEADER -->
     <header>
-        <h1>Manual Book Analis - BPR Kreo Lestari</h1>
-        <nav class="breadcrumb">
-            <a href="../index.html">Beranda</a> &gt; <span>Analis</span>
-        </nav>
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Cari kata..."><button id="searchButton">Cari</button>
+        <img src="../logo2.png" alt="Logo" class="logo">
+      <div class="brand-row">
+          <div class="title">
+          <h1>Manual Book Administrasi Kredit</h1>
+          <div class="sub">BPR Kreo Lestari</div>
         </div>
+      </div>
+      <nav class="top">
+        <div class="breadcrumb">
+          <a href="../index.html">Beranda</a> &gt;
+          <a href="#">Administrasi Kredit</a>
+        </div>
+      </nav>
     </header>
 
+    <!-- DROPDOWN NAV -->
+    <div class="search-bar">
+      <select id="headingDropdown" onchange="scrollToHeading(this.value)">
+        <option value="">-- Daftar Isi --</option>
+        <option value="h-1">Tugas Utama</option>
+        <option value="h-2">Wewenang</option>
+        <option value="h-3">Tanggung Jawab</option>
+        <option value="h-4">A. Persiapan Data dan Dokumen</option>
+        <option value="h-5">B. Survey Lapangan</option>
+        <option value="h-6">C. Analisis Kelayakan Kredit</option>
+        <option value="h-7">D. Penyusunan Memo Kredit</option>
+        <option value="h-8">C. Presentasi di Komite Kredit</option>
+        <option value="h-9">D. Dokumentasi dan Tindak Lanjut</option>  
+      </select>
+    </div>
+  </div> 
+    
+    <!-- GRID 3 KOLOM -->
+    <div class="grid-3col">
+    <!-- KOLOM KIRI (aksen warna / kosong) -->
+    <aside class="accent"></aside>  
+
+    <!-- KONTEN UTAMA -->
     <main>
         <section id="pendahuluan">
             <h2>Pendahuluan</h2>
@@ -36,7 +68,7 @@
             <strong>Divisi:</strong> Kredit / Pembiayaan<br/>
             <strong>Atasan Langsung:</strong> Kepala Bagian Kredit / Manager Operasional
             </p>
-            <h3>Tugas Utama:</h3> 
+            <h3 id="h-1">Tugas Utama:</h3> 
                <ol> 
                 <li>Melakukan analisis kelayakan kredit berdasarkan prinsip 5C (Character, Capacity, Capital, Collateral, Condition).</li>
                 <li>Memverifikasi dokumen dan data calon debitur.</li>
@@ -48,13 +80,13 @@
 
         <section id="wewenang-tanggungjawab">
             <h2>II. Wewenang dan Tanggung Jawab</h2>
-            <h3>A. Wewenang Analis:</h3>
+            <h3 id="h-2">A. Wewenang Analis:</h3>
             <ol>
                 <li>Meminta klarifikasi data kepada calon debitur atau bagian pemasaran.</li>
                 <li>Memberikan rekomendasi persetujuan atau penolakan kredit sesuai batas kewenangan.</li>
                 <li>Menolak pengajuan kredit yang tidak memenuhi persyaratan.</li>
             </ol>
-            <h3>B. Tanggung Jawab:</h3>
+            <h3 id="h-3">B. Tanggung Jawab:</h3>
             <ol>
                 <li>Memastikan seluruh data dan dokumen yang dianalisis valid dan lengkap.</li>
                 <li>Menjaga kerahasiaan informasi nasabah.</li>
@@ -66,28 +98,51 @@
         <section id="sop">
             <h2>III. Standar Operasional Prosedur (SOP) Analis</h2>
 
-            <h3>A. Proses Analisis Kredit</h3>
+            <h3 id="h-4">A. Persiapan Data dan Dokumen</h3>
             <ol>
-                <li>Menerima dokumen pengajuan kredit dari bagian pemasaran.</li>
-                <li>Memeriksa kelengkapan dokumen (KTP, KK, NPWP, slip gaji, laporan keuangan, dsb).</li>
-                <li>Melakukan verifikasi data di lapangan (kunjungan usaha atau rumah).</li>
-                <li>Melakukan analisis kelayakan kredit dengan metode 5C.</li>
-                <li>Menyusun laporan analisis kredit beserta rekomendasi.</li>
-                <li>Menyampaikan laporan ke komite kredit untuk keputusan final.</li>
+                <li>Mengumpulkan seluruh dokumen pengajuan kredit (formulir, KTP, NPWP, SIUP, laporan keuangan, dll).</li>
+                <li>Memastikan kelengkapan dan validitas dokumen sesuai checklist internal.</li>
+                <li>Menyusun ringkasan profil debitur dan tujuan pembiayaan</li>
             </ol>
 
-            <h3>B. Survey Lapangan</h3>
+            <h3 id="h-5">B. Survey Lapangan</h3>
             <ol>
                 <li>Menjadwalkan kunjungan ke lokasi usaha atau tempat tinggal calon debitur.</li>
                 <li>Mencatat hasil observasi terkait kondisi usaha, aset, dan lingkungan.</li>
                 <li>Mendokumentasikan bukti survey (foto, catatan, dan tanda tangan pihak terkait).</li>
             </ol>
 
-            <h3>C. Penanganan Pengajuan Bermasalah</h3>
+            <h3 id="h-6">C. Analisis Kelayakan Kredit</h3>
             <ol>
-                <li>Jika ditemukan ketidaksesuaian data, segera koordinasikan dengan bagian pemasaran atau calon debitur.</li>
-                <li>Menolak atau menunda pengajuan hingga data valid diperoleh.</li>
-                <li>Melaporkan temuan kepada atasan untuk tindak lanjut.</li>
+                <li>Melakukan analisis 5C (Character, Capacity, Capital, Collateral, Condition).</li>
+                <li>Menilai kemampuan bayar berdasarkan cash flow dan rasio keuangan.</li>
+                <li>Mengecek histori kredit melalui SLIK OJK dan database internal.</li>
+                <li>Menilai agunan, termasuk appraisal dan legalitasnya.</li>
+            </ol>
+
+            <h3 id="h-7">D. Penyusunan Memo Kredit</h3>
+            <ol>
+                <li>Menyusun memo kredit yang berisi: 
+                    <ui>Ringkasan profil calon debitur.</ui>
+                    <ui>Tujuan dan struktur pembiayaan.</ui>
+                    <ui>Hasil analisis kelayakan.</ui>
+                    <ui>Rekomendasi limit dan tenor.</ui>
+                    <ui>Risiko dan mitigasi</ui></li>
+                <li>Menyertakan simulasi angsuran dan skenario terburuk.</li>
+            </ol>
+
+            <h3 id="h-8">E. Presentasi di Komite Kredit.</h3>
+            <ol>
+                <li>Menyampaikan hasil analisa secara riingkas dan sistematis.</li>
+                <li>Menjawab pertanyaan dari anggota komite terkait resiko, mitigati dan rekomendasi.</li>
+                <li>Menyampaikan alternatif skema pembiayaan jika diperlukan.</li>
+            </ol>
+
+            <h3 id="h-9">F. Dokumentasi dan Tindak Lanjut.</h3>
+            <ol>
+                <li>Mencatat hasil keputusan komite (disetujui, ditolak, revisi).</li>
+                <li>Mengupdate status pengajuan di sistem internal (Teradata dan AppSheet).</li>
+                <li>Menyusun notulen dan menyimpan memo kredit sebagai arsip.</li>
             </ol>
         </section>
 
@@ -116,4 +171,5 @@
     </footer>
 </body>
 </html>
+
 
