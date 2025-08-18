@@ -52,7 +52,7 @@ header {
   color: #3498db; font-weight: 700; font-size: 18px;
 }
 .title h1 { margin: 0; font-size: 28px; font-weight: 800; }
-.title .sub { opacity: .9; font-size: 14px; }
+.title .sub { opacity: .9; font-size: 20px; }
 
 /* Nav */
 nav.top { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
