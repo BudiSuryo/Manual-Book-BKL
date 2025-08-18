@@ -176,31 +176,7 @@
     <p>&copy; 2025 BPR - Manual Book Bagian Legal</p>
   </footer>
 
-  <!-- Loader otomatis: coba /js/script2.js, jika gagal fallback ke /js/script.js -->
-  <script>
-    (function () {
-      function loadScript(src, onSuccess, onError) {
-        const s = document.createElement("script");
-        s.src = src;
-        s.defer = true;
-        s.onload = onSuccess;
-        s.onerror = onError;
-        document.head.appendChild(s);
-      }
-
-      // Coba muat script2.js lebih dulu (berisi: auto-TOC + scrollToHeading + highlight)
-      loadScript("/js/script2.js",
-        function () {
-          console.log("✅ script2.js berhasil dimuat");
-        },
-        function () {
-          console.warn("⚠️ script2.js tidak ditemukan, fallback ke script.js");
-          loadScript("/js/script.js", function () {
-            console.log("✅ script.js berhasil dimuat sebagai fallback");
-          });
-        }
-      );
-    })();
-  </script>
+ <script src="/js/script2.js" defer></script>
 </body>
 </html>
+
