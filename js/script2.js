@@ -1,41 +1,48 @@
-// Generate Dropdown TOC otomatis dari semua <h3 id="...">
+// ======================
+// Scroll ke heading + highlight
+// ======================
+function scrollToHeading(selectedId) {
+  if (!selectedId) return;
+
+  const target = document.getElementById(selectedId);
+  if (!target) return;
+
+  // Scroll halus
+  target.scrollIntoView({ behavior: "smooth", block: "start" });
+
+  // Hapus highlight sebelumnya
+  const prev = document.querySelector(".highlight");
+  if (prev) prev.classList.remove("highlight");
+
+  // Tambahkan highlight ke target
+  target.classList.add("highlight");
+
+  // Hilangkan highlight setelah 5 detik (opsional)
+  setTimeout(() => target.classList.remove("highlight"), 5000);
+}
+
+// Ekspos ke global (dipakai oleh onchange di <select>)
+window.scrollToHeading = scrollToHeading;
+
+
+// ======================
+/* Generate Dropdown TOC otomatis dari semua <h3 id="..."> */
+// ======================
 document.addEventListener("DOMContentLoaded", function () {
   const dropdown = document.getElementById("headingDropdown");
   if (!dropdown) return; // kalau dropdown nggak ada, skip
 
-  // cari semua h3 di dalam .content
+  // Ambil semua h3 yang punya id, hanya di dalam .content
   const headings = document.querySelectorAll(".content h3[id]");
 
-  // hapus option lama kecuali yang default
+  // Bersihkan option lama kecuali default "-- Daftar Isi --"
   dropdown.querySelectorAll("option:not([value=''])").forEach(opt => opt.remove());
 
-  // isi option otomatis
+  // Tambahkan option sesuai h3
   headings.forEach(h3 => {
     const option = document.createElement("option");
     option.value = h3.id;
-    option.textContent = h3.textContent;
+    option.textContent = h3.textContent.trim();
     dropdown.appendChild(option);
   });
 });
-
-
-// scroll halus ke heading
-      target.scrollIntoView({ behavior: "smooth" });
-
-      // hapus highlight sebelumnya (jika ada)
-      const previous = document.querySelector(".highlight");
-      if (previous) previous.classList.remove("highlight");
-
-      // tambahkan highlight ke target
-      target.classList.add("highlight");
-
-      // opsional: hilangkan highlight setelah beberapa detik
-      setTimeout(() => {
-        target.classList.remove("highlight");
-      }, 5000); // 5 detik
-    }
-  }
-}
-
-// pastikan fungsi bisa diakses global (untuk onchange di <select>)
-window.scrollToHeading = scrollToHeading;
