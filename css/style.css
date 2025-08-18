@@ -77,29 +77,47 @@ nav.top a {
 }
 
 /* ====== Grid Layout (baru) ====== */
-.page-grid {
+.grid-3col {
   display: grid;
   grid-template-columns: 1fr minmax(700px, 1000px) 1fr; 
   gap: 20px;
   margin: 20px auto;
   max-width: 1400px;
 }
-.side {
-  background: #e6f4fa; /* aksen kiri/kanan */
+
+/* Kolom aksen kiri & kanan */
+.grid-3col .accent {
+  background: #e6f4fa; /* warna aksen */
   border-radius: 8px;
 }
-.content {
-  background: var(--card);
+
+/* Konten utama */
+.grid-3col .content {
+  background: var(--card, #fff); /* fallback kalau --card tidak ada */
   padding: 24px;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-/* Responsive (HP & Tablet) */
+/* Responsif untuk HP */
+@media (max-width: 900px) {
+  .grid-3col {
+    grid-template-columns: 1fr; /* jadi 1 kolom */
+  }
+  .grid-3col .accent {
+    display: none; /* sembunyikan aksen */
+  }
+}
+
+/* ====== Responsive (HP & Tablet) ====== */
 @media (max-width: 920px) {
-  .page-grid { grid-template-columns: 1fr; }
-  .side { display: none; }
-  .content {
+  .grid-3col {
+    grid-template-columns: 1fr; /* hanya 1 kolom */
+  }
+  .grid-3col .accent {
+    display: none; /* sembunyikan aksen kiri/kanan */
+  }
+  .grid-3col .content {
     padding: 16px;
     border-radius: 8px;
   }
@@ -107,19 +125,29 @@ nav.top a {
 
 /* ====== Cards & Sections ====== */
 .card {
-  background: var(--card);
+  background: var(--card, #fff);
   border: 1px solid #e5e7eb;
-  border-radius: var(--radius);
+  border-radius: var(--radius, 12px);
   padding: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* biar lebih rapi */
 }
+
 .content section {
-  background: var(--card);
+  background: var(--card, #fff);
   border: 1px solid #e5e7eb;
-  border-radius: var(--radius);
+  border-radius: var(--radius, 12px);
   padding: 18px;
   margin-bottom: 14px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
 }
-.content h2 { margin: .2rem 0 1rem 0; }
+
+.content h2 {
+  margin: 0.2rem 0 1rem 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
 
 /* ====== TOC (opsional) ====== */
 .side h3 {
