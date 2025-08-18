@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manual Book Bagian Internal Audit - BPR</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style2.css">
      <script>
     // Proteksi halaman (jalankan secepat mungkin sebelum konten ditampilkan)
     if (sessionStorage.getItem("isLoggedIn") !== "true") {
@@ -19,9 +19,11 @@
             <a href="../index.html">Beranda</a> &gt; <span>Bagian Internal Audit</span>
         </nav>
         <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Cari kata...">
-            <button id="searchButton">Cari</button>
-        </div>
+  <select id="headingDropdown" onchange="scrollToHeading(this.value)">
+    <option value="">-- Daftar Isi --</option>
+  </select>
+</div>
+
     </header>
 
     <main>
@@ -129,4 +131,5 @@
     </footer>
 </body>
 </html>
+
 
