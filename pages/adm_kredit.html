@@ -20,26 +20,51 @@
         <img src="logo.png" alt="Logo BPR" class="logo">
         <div class="brand-row">
         <div class="brand-logo">BPR</div>
-        <h1>Manual Book Administrasi Kredit - BPR Kreo Lestari</h1>
-        <nav class="breadcrumb">
-            <a href="../index.html">Beranda</a> &gt; <span>Administrasi Kredit</span>
-        </nav>
+            <div class="title">
+            <h1>Manual Book Administrasi Kredit</h1>
+            <div class="sub">BPR Kreo Lestari</div>
+            </div>
+        </div>
+            <nav class="top">
+                <a href="#">Beranda</a>
+                <a href="#">Administrasi Kredit</a>
+            </nav>
+      </header>
+
+    <div class="toolbar"> 
+            <div class="breadcrumb">
+            <a href="#">Beranda</a> &gt; <span>Administrasi Kredit</span>
+            </div>
+        
         <div class="search-bar">
-    <select id="headingDropdown" onchange="scrollToHeading(this.value)">
-    <option value="">-- Pilih Heading --</option>
-    <option value="h-1">Tugas Utama</option>
-    <option value="h-2">Wewenang</option>
-    <option value="h-3">Tanggung Jawab</option> 
-    <option value="h-4">A. Penerimaan Dokumen Kredit</option>
-    <option value="h-5">B. Pembuatan Akad Kredit</option>
-    <option value="h-6">C. Pencairan Kredit</option>
-    <option value="h-7">D. Pengarsipan Dokumen</option>       
-    </select>
-</div>
-
-    </header>
-
-    <main>
+            <select id="headingDropdown" onchange="scrollToHeading(this.value)">
+            <option value="">-- Pilih Heading --</option>
+            <option value="h-1">Tugas Utama</option>
+            <option value="h-2">Wewenang</option>
+            <option value="h-3">Tanggung Jawab</option> 
+            <option value="h-4">A. Penerimaan Dokumen Kredit</option>
+            <option value="h-5">B. Pembuatan Akad Kredit</option>
+            <option value="h-6">C. Pencairan Kredit</option>
+            <option value="h-7">D. Pengarsipan Dokumen</option>       
+            </select>
+        </div>
+    </div>
+    
+    <!-- MAIN GRID -->
+    <div class="grid">
+      <!-- SIDEBAR -->
+      <aside class="side">
+        <div class="card">
+          <h3>Daftar Isi</h3>
+          <nav class="toc">
+            <a href="#pendahuluan">Pendahuluan</a>
+            <a href="#jobdesc">I. Job Description</a>
+            <a href="#wewenang">II. Wewenang & Tanggung Jawab</a>
+          </nav>
+        </div>
+      </aside>
+        
+    <main class="content>
         <section id="pendahuluan">
             <h2>Pendahuluan</h2>
             <p>Manual Book ini memberikan panduan lengkap bagi petugas Administrasi Kredit dalam mengelola seluruh proses administrasi pembiayaan, mulai dari penerimaan dokumen, pencatatan, pembuatan perjanjian, pencairan, hingga pengarsipan sesuai ketentuan BPR dan peraturan OJK.</p>
@@ -140,6 +165,7 @@
      <script src="/js/script.js" defer></script>
     </body>
 </html>
+
 
 
 
