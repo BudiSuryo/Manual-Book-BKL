@@ -3,79 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual Book AO Junior - BPR</title>
-    <link rel="stylesheet" href="css/style.css">
-     <script>
+    <title>Manual Book Bagian Kolektor (AO Junior) - BPR</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script>
     // Proteksi halaman (jalankan secepat mungkin sebelum konten ditampilkan)
     if (sessionStorage.getItem("isLoggedIn") !== "true") {
         window.location.href = "index.html";
     }
-  </script>
+    </script>
 </head>
 <body>
+<div class="wrap">
+    <!-- HEADER -->    
     <header>
-        <h1>Manual Book AO Junior - BPR Kreo Lestari</h1>
-        <nav class="breadcrumb">
-            <a href="../index.html">Beranda</a> &gt; <span>AO Junior</span>
-        </nav>
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Cari kata..."><button id="searchButton">Cari</button>
+      <img src="../logo2.png" alt="Logo" class="logo">
+      <div class="brand-row">
+          <div class="title">
+          <h1>Manual Book Kolektor (AO Junior)</h1>
+          <div class="sub">BPR Kreo Lestari</div>
         </div>
+      </div>
+      <nav class="top">
+        <div class="breadcrumb">
+          <a href="../index.html">Beranda</a> &gt;
+          <a href="#">Kolektor</a>
+        </div>
+      </nav>
     </header>
 
-    <main>
+    <!-- DROPDOWN NAV -->
+    <div class="search-bar">
+      <select id="headingDropdown" onchange="scrollToHeading(this.value)">
+        <option value="">-- Daftar Isi --</option>
+      </select>
+    </div>
+
+  <!-- GRID 3 KOLOM -->
+  <div class="grid-3col">
+    <!-- KOLOM KIRI (aksen warna / kosong) -->
+    <aside class="accent"></aside>
+      
+    <main class="content">
         <section id="pendahuluan">
             <h2>Pendahuluan</h2>
-            <p>Manual Book ini menjadi panduan resmi bagi Account Officer (AO) Junior BPR dalam menjalankan kegiatan penagihan, kunjungan nasabah, dan pelaporan hasil kerja, sesuai dengan SOP internal dan regulasi yang berlaku.</p>
+            <p>
+                Manual Book ini memberikan panduan bagi Kolektor (AO Junior) dalam melaksanakan fungsi penagihan, monitoring 
+                nasabah, dan pengelolaan informasi kredit secara efisien, aman, dan sesuai kebijakan internal BPR.
+            </p>
         </section>
 
         <section id="jobdesc">
             <h2>I. Job Description</h2>
             <p>
-            <strong>Posisi:</strong> AO Junior<br/>
-            <strong>Divisi:</strong> Kredit/Collection<br/>
-            <strong>Atasan Langsung:</strong> Kepala Cabang
+                <strong>Posisi:</strong> Kolektor / AO Junior<br/>
+                <strong>Divisi:</strong> Kredit<br/>
+                <strong>Atasan Langsung:</strong> Kepala Cabang
             </p>
-            <h3>Tugas Utama:</h3> 
+            <h3 id="h1">Tugas Utama:</h3>
             <ol>
-                <li>Melakukan penagihan angsuran kredit nasabah tepat waktu.</li>
-                <li>Menerima setoran titipan tabungan dari nasabah.</li>
-                <li>Mengunjungi nasabah sesuai jadwal kunjungan harian.</li>
-                <li>Menginput hasil kunjungan dan pembayaran ke sistem AppSheet.</li>
-                <li>Melaporkan kendala penagihan ke atasan.</li>
-                <li>Menjaga hubungan baik dengan nasabah untuk kelancaran pembayaran.</li>
+                <li>Melakukan kunjungan atau komunikasi dengan nasabah sesuai jadwal penagihan.</li>
+                <li>Menerima titipan setoran tabungan dari nasabah.</li>
+                <li>Memonitor pembayaran angsuran dan menindaklanjuti keterlambatan.</li>
+                <li>Mengidentifikasi risiko kredit dan memberikan laporan kondisi nasabah.</li>
+                <li>Menjaga hubungan baik dengan nasabah untuk memastikan pembayaran tepat waktu.</li>
+                <li>Menginput data kunjungan dan status pembayaran ke sistem internal.</li>
+                <li>Melaporkan kasus khusus atau risiko tinggi kepada atasan untuk tindak lanjut.</li>
             </ol>
         </section>
 
         <section id="wewenang-tanggungjawab">
             <h2>II. Wewenang dan Tanggung Jawab</h2>
-            <h3>A. Wewenang AO Junior:</h3>
+            <h3 id="h2">Wewenang:</h3>
             <ol>
-                <li>Melakukan penagihan langsung ke nasabah sesuai daftar tagihan.</li>
-                <li>Menerima pembayaran dari nasabah dalam bentuk tunai atau transfer sesuai ketentuan.</li>
-                <li>Menyampaikan surat peringatan kepada nasabah menunggak.</li>
+                <li>Melakukan komunikasi dengan nasabah terkait angsuran dan pembayaran kredit.</li>
+                <li>Meminta informasi terkait status keuangan nasabah yang relevan dengan kredit.</li>
+                <li>Menerima pembayaran dari nasabah dalam bentuk tunai sesuai ketentuan.</li>
             </ol>
-            <h3>B. Tanggung Jawab:</h3>
+            <h3 id="h3">Tanggung Jawab:</h3>
             <ol>
-                <li>Menjaga keamanan dana yang diterima sampai disetor ke kasir.</li>
-                <li>Melaporkan semua hasil penagihan secara harian.</li>
-                <li>Menjaga kerahasiaan data nasabah.</li>
-                <li>Mematuhi prosedur penagihan yang berlaku dan menghindari kekerasan/fraud.</li>
+                <li>Menjalankan penagihan dan monitoring dengan profesional dan sesuai SOP.</li>
+                <li>Menyampaikan laporan kunjungan dan hasil monitoring kepada atasan langsung.</li>
+                <li>Menjaga kerahasiaan informasi kredit nasabah.</li>
+                <li>Melaporkan keterlambatan atau risiko kredit tinggi secara tepat waktu.</li>
+                <li>Memastikan seluruh catatan kunjungan dan status pembayaran terinput dengan akurat.</li>
             </ol>
         </section>
 
         <section id="sop">
-            <h2>III. Standar Operasional Prosedur (SOP) AO Junior</h2>
+            <h2>III. Standar Operasional Prosedur (SOP)</h2>
 
-            <h3>A. Persiapan Sebelum Penagihan</h3>
+            <h3 id="h4">A. Persiapan Kunjungan</h3>
             <ol>
-                <li>Menerima daftar nasabah yang akan ditagih dari atasan.</li>
+                <li>Memeriksa jadwal kunjungan dan daftar nasabah yang harus dikunjungi.</li>
                 <li>Memastikan semua data tagihan lengkap (nama, alamat, nominal, jatuh tempo).</li>
                 <li>Menyiapkan surat penagihan atau surat peringatan jika diperlukan.</li>
-                <li>Siapkan perangkat kerja (HP, buku catatan, kwitansi resmi).</li>
+                <li>Siapkan perangkat kerja (HP, buku catatan, tanda terima resmi).</li>
             </ol>
 
-            <h3>B. Pelaksanaan Penagihan</h3>
+            <h3 id="h5">B. Pelaksanaan Kunjungan/Penagihan</h3>
             <ol>
                 <li>Kunjungi nasabah sesuai rute yang telah ditentukan.</li>
                 <li>Perkenalkan diri dan sampaikan tujuan penagihan dengan sopan.</li>
@@ -83,35 +108,37 @@
                 <li>Terima pembayaran tunai sesuai nominal dan berikan bukti pembayaran resmi.</li>
                 <li>Jika pembayaran via transfer, pastikan bukti transfer valid dan infokan ke Kantor Cabang masing-masing untuk lanjut diproses oleh Bagian Tabungan.</li>
                 <li>Input hasil penagihan ke sistem AppSheet secara real-time.</li>
+                <li>Memberikan pengingat pembayaran angsuran kepada nasabah.</li>
+                <li>Mendokumentasikan kendala atau hambatan dalam proses penagihan.</li>
             </ol>
 
-            <h3>C. Penanganan Nasabah Menunggak</h3>
-            <ol>
-                <li>Sampaikan surat peringatan atau penjadwalan ulang pembayaran.</li>
-                <li>Catat alasan keterlambatan dan potensi penyelesaian.</li>
-                <li>Lapor ke atasan untuk tindak lanjut (misalnya restrukturisasi).</li>
-            </ol>
-
-            <h3>D. Penyetoran Hasil Tagihan</h3>
+            <h3 id="h6">C. Penyetoran Hasil Tagihan</h3>
             <ol>
                 <li>Setor seluruh hasil penagihan ke kasir BPR pada hari yang sama.</li>
                 <li>Cocokkan nominal setoran dengan laporan penagihan.</li>
                 <li>Minta tanda terima setoran dari kasir.</li>
             </ol>
 
-            <h3>E. Pelaporan Harian</h3>
+            <h3 id="h7">E. Arsip dan Pelaporan</h3>
             <ol>
                 <li>Rekap seluruh hasil penagihan (tunai & transfer) di AppSheet.</li>
-                <li>Laporkan kendala atau kasus khusus ke atasan.</li>
                 <li>Simpan arsip bukti pembayaran untuk keperluan audit.</li>
+                <li>Membuat laporan mingguan/harian sesuai ketentuan atasan.</li>
+                <li>Laporkan kendala atau kasus khusus ke atasan.</li>
+                <li>Melaporkan nasabah bermasalah atau risiko tinggi kepada Kepala Bagian Kredit.</li>
+                <li>Mendukung tindakan follow-up lebih lanjut oleh atasan atau tim koleksi senior.</li>
             </ol>
+            
         </section>
 
-        <section id="prilaku-kerja">
+        <section id="perilaku-kerja">
             <h2>IV. Aturan dan Perilaku Kerja</h2>
             <ol>
                 <li>Menggunakan seragam resmi, ID Card, dan membawa surat tugas.</li>
-                <li>Bersikap sopan, ramah, dan profesional dalam setiap interaksi.</li>
+                <li>Menjaga integritas dan profesionalisme dalam berinteraksi dengan nasabah.</li>
+                <li>Mematuhi SOP internal dan regulasi terkait penagihan kredit.</li>
+                <li>Menjaga kerahasiaan data dan informasi nasabah.</li>
+                <li>Melaporkan masalah atau risiko kredit secara transparan dan tepat waktu.</li>
                 <li>Dilarang menerima pembayaran tanpa memberikan bukti resmi.</li>
                 <li>Dilarang menggunakan dana tagihan untuk kepentingan pribadi.</li>
             </ol>
@@ -120,16 +147,48 @@
         <section id="catatan">
             <h2>V. Catatan Penting</h2>
             <p>
-                AO Junior wajib mematuhi regulasi OJK dan SOP internal BPR.  
-                Dilarang melakukan intimidasi atau tindakan di luar hukum.  
-                Semua transaksi penagihan harus tercatat di sistem dan dapat dipertanggungjawabkan.  
-                Pelanggaran akan dikenakan sanksi sesuai ketentuan perusahaan.
+                Bagian Kolektor (AO Junior) memiliki peran penting dalam memonitor pembayaran kredit dan menjaga kualitas portofolio. 
+                Kinerja yang tepat dan disiplin akan mendukung kelancaran arus kas BPR dan meminimalkan risiko kredit bermasalah.
             </p>
         </section>
     </main>
 
+    <!-- KOLOM KANAN (aksen warna / kosong) -->
+    <aside class="accent"></aside>
+  </div>
+
+  <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 BPR - Manual Book AO Junior</p>
+        <p>&copy; 2025 BPR - Manual Book Bagian Kolektor (AO Junior)</p>
     </footer>
 </body>
 </html>
+
+<script src="/js/script2.js" defer></script>
+
+<script>
+(function() {
+  // fungsi untuk load script dinamis
+  function loadScript(src, onSuccess, onError) {
+    const s = document.createElement("script");
+    s.src = src;
+    s.defer = true;
+    s.onload = onSuccess;
+    s.onerror = onError;
+    document.head.appendChild(s);
+  }
+
+  // coba load script2.js dulu
+  loadScript("/js/script2.js", 
+    function() {
+      console.log("✅ script2.js berhasil dimuat");
+    },
+    function() {
+      console.warn("⚠️ script2.js tidak ada, coba fallback ke script.js");
+      loadScript("/js/script.js", function() {
+        console.log("✅ script.js berhasil dimuat sebagai fallback");
+      });
+    }
+  );
+})();
+</script>
