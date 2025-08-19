@@ -3,81 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual Book Tabungan - BPR</title>
-    <link rel="stylesheet" href="css/style.css">
-     <script>
+    <title>Manual Book Bagian Tabungan & Deposito - BPR</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script>
     // Proteksi halaman (jalankan secepat mungkin sebelum konten ditampilkan)
     if (sessionStorage.getItem("isLoggedIn") !== "true") {
         window.location.href = "index.html";
     }
-  </script>
+    </script>
 </head>
 <body>
+<div class="wrap">
+    <!-- HEADER -->    
     <header>
-        <h1>Manual Book Tabungan - BPR Kreo Lestari</h1>
-        <nav class="breadcrumb">
-            <a href="../index.html">Beranda</a> &gt; <span>Tabungan</span>
-        </nav>
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Cari kata..."><button id="searchButton">Cari</button>
+      <img src="../logo2.png" alt="Logo" class="logo">
+      <div class="brand-row">
+          <div class="title">
+          <h1>Manual Book Tabungan & Deposito</h1>
+          <div class="sub">BPR Kreo Lestari</div>
         </div>
+      </div>
+      <nav class="top">
+        <div class="breadcrumb">
+          <a href="../index.html">Beranda</a> &gt;
+          <a href="#">Tabungan & Deposito</a>
+        </div>
+      </nav>
     </header>
 
-    <main>
+    <!-- DROPDOWN NAV -->
+    <div class="search-bar">
+      <select id="headingDropdown" onchange="scrollToHeading(this.value)">
+        <option value="">-- Daftar Isi --</option>
+      </select>
+    </div>
+
+  <!-- GRID 3 KOLOM -->
+  <div class="grid-3col">
+    <!-- KOLOM KIRI (aksen warna / kosong) -->
+    <aside class="accent"></aside>
+      
+    <main class="content">
         <section id="pendahuluan">
             <h2>Pendahuluan</h2>
-            <p>Manual Book ini memberikan panduan lengkap bagi petugas bagian Tabungan BPR dalam mengelola produk tabungan, pembukaan dan penutupan rekening, serta pelayanan administrasi sesuai dengan prosedur dan regulasi yang berlaku.</p>
+            <p>
+                Manual Book ini memberikan panduan bagi Bagian Tabungan dan Deposito dalam menangani seluruh transaksi nasabah 
+                terkait simpanan, memastikan keamanan dana, dan kepatuhan terhadap prosedur internal serta peraturan perbankan yang berlaku.
+            </p>
         </section>
 
         <section id="jobdesc">
             <h2>I. Job Description</h2>
             <p>
-            <strong>Posisi:</strong> Petugas Tabungan<br/>
-            <strong>Divisi:</strong> Operasional / Funding<br/>
-            <strong>Atasan Langsung:</strong> PE. Back Office / Manager Operasional
+                <strong>Posisi:</strong> Staff Tabungan & Deposito<br/>
+                <strong>Divisi:</strong> Tabungan & Deposito<br/>
+                <strong>Atasan Langsung:</strong> Kepala Bagian Tabungan & Deposito
             </p>
-            <h3>Tugas Utama:</h3> 
-               <ol> 
-                <li>Melakukan pembukaan rekening tabungan baru sesuai prosedur.</li>
+            <h3 id="h1">Tugas Utama:</h3>
+            <ol>
+                <li>Mengelola pembukaan, penutupan, dan perubahan rekening tabungan/deposito.</li>
                 <li>Melayani perubahan data nasabah (alamat, kontak, ahli waris, dsb).</li>
                 <li>Memproses penutupan rekening tabungan sesuai ketentuan.</li>
                 <li>Mengelola administrasi dokumen tabungan dan arsip nasabah.</li>
-                <li>Memberikan informasi produk tabungan kepada calon nasabah.</li>
+                <li>Memberikan informasi produk, bunga, dan syarat ketentuan kepada nasabah.</li>
+                <li>Menjaga keamanan dokumen dan transaksi nasabah.</li>
+                <li>Melaporkan masalah, selisih, atau transaksi mencurigakan sesuai prosedur internal.</li>
             </ol>
         </section>
 
         <section id="wewenang-tanggungjawab">
             <h2>II. Wewenang dan Tanggung Jawab</h2>
-            <h3>A. Wewenang Petugas Tabungan:</h3>
+            <h3 id="h2">Wewenang</h3>
             <ol>
-                <li>Menerima dan memproses aplikasi pembukaan rekening tabungan.</li>
-                <li>Memberikan informasi resmi terkait fitur dan syarat produk tabungan.</li>
+                <li>Mengakses data rekening nasabah yang menjadi tanggung jawabnya.</li>
                 <li>Memverifikasi kelengkapan dokumen nasabah.</li>
+                <li>Meminta informasi tambahan dari unit terkait bila diperlukan untuk proses transaksi.</li>
+                <li>Menyampaikan laporan tabungan/deposito kepada atasan langsung.</li>
             </ol>
-            <h3>B. Tanggung Jawab:</h3>
+            <h3 id="h3">Tanggung Jawab</h3>
             <ol>
                 <li>Memastikan seluruh dokumen nasabah valid dan lengkap.</li>
                 <li>Mencatat seluruh transaksi administrasi tabungan dalam sistem core banking.</li>
-                <li>Menjaga kerahasiaan data nasabah.</li>
+                <li>Menjaga kerahasiaan informasi nasabah.</li>
                 <li>Melaporkan setiap temuan dokumen atau data yang mencurigakan kepada atasan.</li>
+                <li>Memastikan semua proses sesuai prosedur internal dan regulasi perbankan.</li>
             </ol>
         </section>
 
         <section id="sop">
-            <h2>III. Standar Operasional Prosedur (SOP) Tabungan</h2>
+            <h2>III. Standar Operasional Prosedur (SOP)</h2>
 
-            <h3>A. Pembukaan Rekening Tabungan</h3>
+            <h3 id="h4">A. Pembukaan Rekening</h3>
             <ol>
                 <li>Terima formulir pembukaan rekening dari nasabah.</li>
                 <li>Verifikasi kelengkapan dokumen (KTP, NPWP jika ada, formulir aplikasi).</li>
                 <li>Input data nasabah ke sistem core banking Teradata.</li>
                 <li>Masukkan data ke sistem AppSheet untuk pelaporan internal.</li>
-                <li>Setorkan saldo awal sesuai jenis tabungan.</li>
-                <li>Berikan buku tabungan atau kartu ATM kepada nasabah.</li>
+                <li>Mintakan persetujuan atasan terkait suku bunga deposito yang diberikan.</li>
+                <li>Setorkan saldo awal sesuai jenis tabungan atau deposito.</li>
+                <li>Berikan buku tabungan atau Bilyet Deposito kepada nasabah.</li>
                 <li>Minta tanda tangan nasabah pada buku tabungan dan dokumen arsip.</li>
             </ol>
 
-            <h3>B. Perubahan Data Nasabah</h3>
+            <h3 id="h5">B. Perubahan Data Nasabah</h3>
             <ol>
                 <li>Terima permohonan perubahan data beserta dokumen pendukung (KTP baru, KK, dsb).</li>
                 <li>Verifikasi identitas dan kecocokan data.</li>
@@ -86,7 +114,7 @@
                 <li>Cetak dan serahkan bukti perubahan data kepada nasabah.</li>
             </ol>
 
-            <h3>C. Penutupan Rekening Tabungan</h3>
+            <h3 id="h6">C. Penutupan Rekening & Perubahan Data</h3>
             <ol>
                 <li>Terima permohonan penutupan rekening dari nasabah.</li>
                 <li>Verifikasi identitas dan saldo akhir rekening.</li>
@@ -96,7 +124,14 @@
                 <li>Arsipkan dokumen penutupan rekening.</li>
             </ol>
 
-            <h3>D. Penanganan Masalah</h3>
+            <h3 id="h7">D. Rekonsiliasi & Pelaporan</h3>
+            <ol>
+                <li>Menyusun laporan harian tabungan dan deposito.</li>
+                <li>Melakukan rekonsiliasi saldo rekening dengan catatan internal.</li>
+                <li>Menyampaikan laporan tepat waktu kepada atasan.</li>
+            </ol>
+
+            <h3 id="h8">E. Keamanan dan Kontrol</h3>
             <ol>
                 <li>Jika ditemukan data nasabah yang tidak valid, segera laporkan kepada atasan.</li>
                 <li>Jika nasabah mengeluh, catat kronologi kejadian dan informasikan ke manajemen.</li>
@@ -104,29 +139,61 @@
             </ol>
         </section>
 
-        <section id="prilaku-kerja">
+        <section id="perilaku-kerja">
             <h2>IV. Aturan dan Perilaku Kerja</h2>
             <ol>
-                <li>Menggunakan seragam resmi dan nama tag.</li>
-                <li>Bersikap ramah, sopan, dan profesional.</li>
-                <li>Menjaga keamanan dokumen dan arsip nasabah.</li>
-                <li>Tidak memproses pembukaan rekening tanpa dokumen lengkap.</li>
+                <li>Menjaga integritas, akurasi, dan profesionalisme dalam melayani nasabah.</li>
+                <li>Mematuhi prosedur internal BPR dan regulasi perbankan.</li>
+                <li>Menjaga kerahasiaan data dan informasi nasabah.</li>
+                <li>Melaporkan setiap masalah, ketidaksesuaian, atau transaksi mencurigakan secara transparan.</li>
             </ol>
         </section>
 
         <section id="catatan">
             <h2>V. Catatan Penting</h2>
             <p>
-                Petugas Tabungan wajib mematuhi seluruh SOP internal dan regulasi OJK.  
-                Dilarang memalsukan, mengubah, atau memanipulasi data nasabah.  
-                Semua dokumen harus diarsipkan sesuai jadwal retensi perusahaan.  
-                Pelanggaran akan dikenakan sanksi sesuai ketentuan perusahaan.
+                Bagian Tabungan dan Deposito memiliki peran vital dalam menjaga kepercayaan nasabah dan keamanan dana BPR. 
+                Setiap proses harus dilakukan dengan cermat, sesuai prosedur, dan akurat agar risiko operasional dan kesalahan minimal.
             </p>
         </section>
     </main>
 
+    <!-- KOLOM KANAN (aksen warna / kosong) -->
+    <aside class="accent"></aside>
+  </div>
+
+  <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 BPR - Manual Book Tabungan</p>
+        <p>&copy; 2025 BPR - Manual Book Bagian Tabungan & Deposito</p>
     </footer>
 </body>
 </html>
+
+<script src="/js/script2.js" defer></script>
+
+<script>
+(function() {
+  // fungsi untuk load script dinamis
+  function loadScript(src, onSuccess, onError) {
+    const s = document.createElement("script");
+    s.src = src;
+    s.defer = true;
+    s.onload = onSuccess;
+    s.onerror = onError;
+    document.head.appendChild(s);
+  }
+
+  // coba load script2.js dulu
+  loadScript("/js/script2.js", 
+    function() {
+      console.log("✅ script2.js berhasil dimuat");
+    },
+    function() {
+      console.warn("⚠️ script2.js tidak ada, coba fallback ke script.js");
+      loadScript("/js/script.js", function() {
+        console.log("✅ script.js berhasil dimuat sebagai fallback");
+      });
+    }
+  );
+})();
+</script>
