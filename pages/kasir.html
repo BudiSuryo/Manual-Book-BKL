@@ -3,69 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual Book Kasir - BPR</title>
-    <link rel="stylesheet" href="css/style.css">
-     <script>
+    <title>Manual Book Bagian Kasir - BPR</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script>
     // Proteksi halaman (jalankan secepat mungkin sebelum konten ditampilkan)
     if (sessionStorage.getItem("isLoggedIn") !== "true") {
         window.location.href = "index.html";
     }
-  </script>
+    </script>
 </head>
 <body>
+<div class="wrap">
+    <!-- HEADER -->    
     <header>
-        <h1>Manual Book Kasir - BPR Kreo Lestari</h1>
-        <nav class="breadcrumb">
-            <a href="../index.html">Beranda</a> &gt; <span>Kasir</span>
-        </nav>
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Cari kata..."><button id="searchButton">Cari</button>
+      <img src="../logo2.png" alt="Logo" class="logo">
+      <div class="brand-row">
+          <div class="title">
+          <h1>Manual Book Kasir</h1>
+          <div class="sub">BPR Kreo Lestari</div>
         </div>
+      </div>
+      <nav class="top">
+        <div class="breadcrumb">
+          <a href="../index.html">Beranda</a> &gt;
+          <a href="#">Kasir</a>
+        </div>
+      </nav>
     </header>
 
-    <main>
+    <!-- DROPDOWN NAV -->
+    <div class="search-bar">
+      <select id="headingDropdown" onchange="scrollToHeading(this.value)">
+        <option value="">-- Daftar Isi --</option>
+      </select>
+    </div>
+
+  <!-- GRID 3 KOLOM -->
+  <div class="grid-3col">
+    <!-- KOLOM KIRI (aksen warna / kosong) -->
+    <aside class="accent"></aside>
+      
+    <main class="content">
         <section id="pendahuluan">
             <h2>Pendahuluan</h2>
-            <p>Manual Book ini disusun untuk memberikan panduan lengkap kepada Kasir BPR dalam menjalankan tugas dan tanggung jawabnya sesuai standar perusahaan dan regulasi yang berlaku.</p>
+            <p>
+                Manual Book ini memberikan panduan bagi Bagian Kasir dalam menjalankan seluruh aktivitas transaksi keuangan BPR 
+                secara akurat, cepat, dan sesuai prosedur, serta memastikan keamanan dana dan kepatuhan terhadap kebijakan internal.
+            </p>
         </section>
 
         <section id="jobdesc">
             <h2>I. Job Description</h2>
             <p>
-            <strong>Posisi:</strong> Kasir</br>
-            <strong>Divisi:</strong> Operasional / Teller</br>
-            <strong>Atasan Langsung:</strong> PE. Back Office / Manager Operasional
+                <strong>Posisi:</strong> Kasir<br/>
+                <strong>Divisi:</strong> Keuangan / Kas<br/>
+                <strong>Atasan Langsung:</strong> Kepala Bagian Keuangan
             </p>
-            <h3>Tugas Utama:</h3> 
-               <ol> 
-                <li>Melayani transaksi nasabah secara cepat, akurat, dan ramah.</li>
-                <li>Menangani setoran tunai, penarikan tunai, transfer, dan pembayaran lainnya.</li>
-                <li>Menyusun laporan harian kas dan memastikan saldo kas sesuai.</li>
-                <li>Menjaga keamanan dan kerahasiaan dana nasabah.</li>
-                <li>Menangani setoran/check/tranfer sesuai prosedur BPR dan regulasi OJK.</li>
+            <h3 id="h1">Tugas Utama:</h3>
+            <ol>
+                <li>Menerima dan memproses setoran, penarikan, dan transaksi nasabah lainnya.</li>
+                <li>Memastikan keakuratan catatan transaksi harian.</li>
+                <li>Membuat laporan kas harian dan rekonsiliasi saldo kas.</li>
+                <li>Menjaga keamanan dana dan dokumen keuangan.</li>
+                <li>Memberikan pelayanan yang ramah dan profesional kepada nasabah.</li>
+                <li>Melaporkan transaksi mencurigakan sesuai prosedur internal.</li>
             </ol>
         </section>
 
         <section id="wewenang-tanggungjawab">
             <h2>II. Wewenang dan Tanggung Jawab</h2>
-            <h3>A. Wewenang Kasir:</h3>
+            <h3 id="h2">Wewenang:</h3>
             <ol>
-                <li>Menerima dan memproses transaksi nasabah sesuai limit yang ditetapkan.</li>
-                <li>Memberikan informasi dasar terkait produk simpanan dan pembayaran.</li>
-                <li>Menandatangani bukti transaksi kas sesuai ketentuan internal.</li>
-                </ol>
-            <h3>B. Tanggung Jawab:</h3>
+                <li>Mengakses kas dan sistem transaksi yang menjadi tanggung jawabnya.</li>
+                <li>Meminta informasi dari unit terkait jika dibutuhkan untuk proses transaksi.</li>
+                <li>Menyampaikan laporan transaksi kepada Kepala Bagian Keuangan.</li>
+            </ol>
+            <h3 id="h3">Tanggung Jawab:</h3>
             <ol>
-                <li>Menjaga keamanan kas dan dokumen transaksi.</li>
-                <li>Melaporkan setiap ketidaksesuaian saldo atau kesalahan transaksi kepada atasan.</li>
-                <li>Mematuhi SOP internal dan peraturan OJK.</li>
+                <li>Menjalankan transaksi kas dengan akurat dan tepat waktu.</li>
+                <li>Menjaga kerahasiaan informasi keuangan nasabah.</li>
+                <li>Melaporkan ketidaksesuaian atau selisih kas segera kepada atasan.</li>
+                <li>Memastikan semua transaksi sesuai prosedur internal BPR.</li>
                 <li>Menjaga kerahasiaan data nasabah.</li>
             </ol>
         </section>
 
         <section id="sop">
-            <h2>III. Standar Operasional Prosedur (SOP) Kasir</h2>
-            <h3>A. Pembukaan Kas.</h3>
+            <h2>III. Standar Operasional Prosedur (SOP)</h2>
+
+            <h3 id="h4">A. Pembukaan Kas</h3>
             <ol>
                 <li>Datang 15 menit sebelum jam operasional.</li>
                 <li>Melakukan pengecekan saldo awal kas harian.</li>
@@ -74,8 +100,7 @@
                 <li>Melaporkan saldo awal ke kepala cabang.</li>
             </ol>
 
-            <h3>B. Transaksi Nasabah.</h3>
-            <p>Setoran Tunai:</p>
+            <h3 id="h5">B. Setoran Tunai</h3>
             <ol>
                 <li>Verifikasi identitas nasabah (KTP / Buku Tabungan).</li>
                 <li>Hitung jumlah uang dan cek keaslian.</li>
@@ -83,7 +108,8 @@
                 <li>Masukan ke sistem AppSheet.</li>
                 <li>Berikan bukti setoran kepada nasabah.</li>
             </ol>
-            <p>Penarikan Tunai:</p>
+
+            <h3 id="h6">C. Penarikan Tunai</h3>
             <ol>
                 <li>Verifikasi identitas nasabah (KTP / Buku Tabungan).</li>
                 <li>Cek saldo nasabah.</li>
@@ -92,7 +118,8 @@
                 <li>Masukan ke sistem AppSheet.</li>
                 <li>Berikan bukti setoran kepada nasabah.</li>
             </ol>
-            <p>Transfer Pembayaran:</p>
+
+            <h3 id="h7">D. Transfer Pembayaran:</h3>
             <ol>
                 <li>Pastikan identitas nasabah valid.</li>
                 <li>Input transaksi sesuai data yang diberikan.</li>
@@ -101,44 +128,81 @@
                 <li>Konfirmasi dan cetak bukti transaksi.</li>
                 <li>Simpan bukti transaksi untuk arsip.</li>
             </ol>
-
-            <h3>C. Penutupan Kas.</h3>
+            
+            <h3 id="h8">D. Penutupan, Rekonsiliasi Kas dan Pelaporan</h3>
             <ol>
-                <li>Hitung saldo akhir kas dan bandingkan dengan catatan transaksi.</li>
-                <li>Rekonsiliasi setiap perbedaan.</li>
+                <li>Menghitung saldo kas harian dan mencocokkan dengan catatan transaksi.</li>
+                <li>Membuat laporan rekonsiliasi harian dan menyerahkan ke Kepala Bagian Keuangan.</li>
                 <li>Menyetor seluruh saldo kas akhir hari ke brankas sesuai ketentuan.</li>
-                <li>Cetak laporan kas harian (end of day report).</li>
+                <li>Menyusun laporan kas harian, bulanan, dan laporan transaksi khusus.</li>
+                <li>Menyampaikan laporan tepat waktu kepada atasan.</li>
             </ol>
 
-            <h3>D. Penanganan Masalah.</h3>
+            <h3 id="h9">E. Keamanan dan Kontrol</h3>
             <ol>
-                <li>Jika terjadi selisih kas, laporkan segera ke atasan.</li>
+                <li>Menjaga keamanan kas dan dokumen transaksi.</li>
+                <li>Segera melaporkan kejadian mencurigakan atau jika terjadi selisih kas.</li>
                 <li>Jika nasabah mengeluh, catat kronologi dan informasikan ke kepala cabang.</li>
                 <li>Selalu dokumentasikan setiap transaksi tidak biasa.</li>
             </ol>
         </section>
 
-        <section id="prilaku-kerja">
+        <section id="perilaku-kerja">
             <h2>IV. Aturan dan Perilaku Kerja</h2>
             <ol>
-                <li>Menggunakan seragam resmi dan nama tag.</li>
-                <li>Bersikap ramah, sopan, dan profesional.</li>
-                <li>Tidak meninggalkan kas tanpa pengawasan.</li>
-                <li>Tidak menggunakan dana kas untuk kepentingan pribadi.</li>
+                <li>Menjaga integritas dan profesionalisme dalam melayani nasabah.</li>
+                <li>Mematuhi prosedur internal BPR secara konsisten.</li>
+                <li>Menjaga kerahasiaan informasi keuangan nasabah.</li>
+                <li>Melaporkan setiap masalah atau anomali secara transparan.</li>
             </ol>
-            
+        </section>
+
         <section id="catatan">
             <h2>V. Catatan Penting</h2>
             <p>
-                Kasir wajib menjaga kerahasiaan data nasabah, mematuhi semua regulasi OJK, dan menghindari konflik kepentingan.
-                Semua transaksi harus dicatat dan dicetak bukti. Setiap kesalahan harus dilaporkan segera.<br/>
-                Pelanggaran terhadap aturan ini akan dikenakan sanksi sesuai ketentuan perusahaan.<br/>
+                Bagian Kasir memiliki peran penting dalam menjaga arus kas dan pelayanan nasabah. 
+                Kesalahan atau kelalaian dapat berdampak langsung pada kepercayaan nasabah dan keuangan BPR. 
+                Oleh karena itu, setiap transaksi harus dilakukan dengan cermat, akurat, dan sesuai prosedur.
             </p>
         </section>
     </main>
 
+    <!-- KOLOM KANAN (aksen warna / kosong) -->
+    <aside class="accent"></aside>
+  </div>
+
+  <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 BPR - Manual Book Kasir</p>
+        <p>&copy; 2025 BPR - Manual Book Bagian Kasir</p>
     </footer>
 </body>
 </html>
+
+<script src="/js/script2.js" defer></script>
+
+<script>
+(function() {
+  // fungsi untuk load script dinamis
+  function loadScript(src, onSuccess, onError) {
+    const s = document.createElement("script");
+    s.src = src;
+    s.defer = true;
+    s.onload = onSuccess;
+    s.onerror = onError;
+    document.head.appendChild(s);
+  }
+
+  // coba load script2.js dulu
+  loadScript("/js/script2.js", 
+    function() {
+      console.log("✅ script2.js berhasil dimuat");
+    },
+    function() {
+      console.warn("⚠️ script2.js tidak ada, coba fallback ke script.js");
+      loadScript("/js/script.js", function() {
+        console.log("✅ script.js berhasil dimuat sebagai fallback");
+      });
+    }
+  );
+})();
+</script>
