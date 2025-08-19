@@ -128,9 +128,7 @@ nav.top a {
   background: var(--card, #fff);
   border: 1px solid #e5e7eb;
   border-radius: var(--radius, 12px);
-  margin-left: 4px;  /* jarak kiri */
-  margin-right: 4px; 
-  padding: 4px;
+  padding: 2px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* biar lebih rapi */
 }
 
@@ -138,8 +136,8 @@ nav.top a {
   background: var(--card, #fff);
   border: 1px solid #e5e7eb;
   border-radius: var(--radius, 12px);
-  padding: 18px;
-  margin-bottom: 14px;
+  padding: 12px;
+  margin-bottom: 12px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.04);
 }
 
