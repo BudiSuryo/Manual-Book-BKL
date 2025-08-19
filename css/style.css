@@ -118,7 +118,7 @@ nav.top a {
     display: none; /* sembunyikan aksen kiri/kanan */
   }
   .grid-3col .content {
-    padding: 16px;
+    padding: 8px;
     border-radius: 8px;
   }
 }
