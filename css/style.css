@@ -75,7 +75,7 @@ nav.top a {
 .search { display: flex; gap: 8px; align-items: center; }
 .search input {
   padding: 10px 12px; border: 1px solid #e5e7eb;
-  border-radius: 10px; min-width: 260px; background: #fff;
+  border-radius: 10px; width: 300px; background: #fff;
 }
 
 /* ====== Grid Layout (baru) ====== */
