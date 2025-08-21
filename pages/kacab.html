@@ -3,124 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual Book Kepala Cabang - BPR</title>
-    <link rel="stylesheet" href="css/style.css">
-     <script>
+    <title>Manual Book Bagian Kepala Cabang - BPR</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script>
     // Proteksi halaman (jalankan secepat mungkin sebelum konten ditampilkan)
     if (sessionStorage.getItem("isLoggedIn") !== "true") {
         window.location.href = "index.html";
     }
-  </script>
+    </script>
 </head>
 <body>
+<div class="wrap">
+    <!-- HEADER -->    
     <header>
-        <h1>Manual Book Kepala Cabang - BPR Kreo Lestari</h1>
-        <nav class="breadcrumb">
-            <a href="../index.html">Beranda</a> &gt; <span>Kepala Cabang</span>
-        </nav>
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Cari kata...">
-            <button id="searchButton">Cari</button>
+      <img src="../logo2.png" alt="Logo" class="logo">
+      <div class="brand-row">
+          <div class="title">
+          <h1>Manual Book Kepala Cabang</h1>
+          <div class="sub">BPR Kreo Lestari</div>
         </div>
+      </div>
+      <nav class="top">
+        <div class="breadcrumb">
+          <a href="../index.html">Beranda</a> &gt;
+          <a href="#">Kepala Cabang</a>
+        </div>
+      </nav>
     </header>
 
-    <main>
+    <!-- DROPDOWN NAV -->
+    <div class="search-bar">
+      <select id="headingDropdown" onchange="scrollToHeading(this.value)">
+        <option value="">-- Daftar Isi --</option>
+      </select>
+    </div>
+
+  <!-- GRID 3 KOLOM -->
+  <div class="grid-3col">
+    <!-- KOLOM KIRI -->
+    <aside class="accent"></aside>
+      
+    <main class="content">
         <section id="pendahuluan">
             <h2>Pendahuluan</h2>
-            <p>Manual Book ini memberikan panduan lengkap bagi Kepala Cabang dalam memimpin, mengawasi, dan mengendalikan seluruh aktivitas operasional cabang BPR sesuai dengan kebijakan perusahaan, regulasi OJK, serta target bisnis yang telah ditetapkan.</p>
+            <p>
+                Manual Book ini memberikan panduan bagi Kepala Cabang dalam menjalankan fungsi kepemimpinan, pengelolaan operasional, 
+                pengawasan kredit, serta pelayanan nasabah di tingkat cabang BPR Kreo Lestari.
+            </p>
         </section>
 
         <section id="jobdesc">
             <h2>I. Job Description</h2>
             <p>
                 <strong>Posisi:</strong> Kepala Cabang<br/>
-                <strong>Divisi:</strong> Operasional Cabang<br/>
-                <strong>Atasan Langsung:</strong> Direktur Operasional / Pimpinan BPR
+                <strong>Divisi:</strong> Manajemen Cabang<br/>
+                <strong>Atasan Langsung:</strong> Direksi / GM Marketing
             </p>
-            <h3>Tugas Utama:</h3>
+            <h3 id="h1">Tugas Utama</h3>
             <ol>
                 <li>Memimpin dan mengawasi seluruh kegiatan operasional cabang.</li>
-                <li>Mencapai target penyaluran kredit, penghimpunan dana, dan kinerja lainnya.</li>
+                <li>Mengkoordinasikan tim kredit, tabungan, kasir, dan kolektor.</li>
+                <li>Memastikan target penyaluran kredit dan penghimpunan dana tercapai.</li>
                 <li>Mengawasi kepatuhan terhadap SOP dan regulasi.</li>
-                <li>Membangun hubungan baik dengan nasabah dan pihak eksternal.</li>
-                <li>Membina, mengarahkan, dan mengevaluasi kinerja seluruh pegawai cabang.</li>
+                <li>Mengevaluasi kinerja karyawan cabang dan memberikan arahan.</li>
+                <li>Menangani permasalahan nasabah dan menyelesaikan keluhan.</li>
+                <li>Menyusun laporan kinerja cabang kepada kantor pusat.</li>
+                <li>Menjaga hubungan baik dengan regulator, nasabah, dan mitra bisnis di wilayah cabang.</li>
             </ol>
         </section>
 
         <section id="wewenang-tanggungjawab">
             <h2>II. Wewenang dan Tanggung Jawab</h2>
-            <h3>A. Wewenang Kepala Cabang:</h3>
+            <h3 id="h2">Wewenang</h3>
             <ol>
-                <li>Menentukan strategi operasional cabang untuk mencapai target.</li>
-                <li>Memberikan persetujuan kredit sesuai limit kewenangan.</li>
+                <li>Menetapkan strategi teknis operasional cabang sesuai arahan kantor pusat.</li>
                 <li>Menentukan pembagian tugas dan tanggung jawab staf cabang.</li>
+                <li>Mengevaluasi dan menilai kinerja karyawan di cabang.</li>
+                <li>Menetapkan strategi pencapaian target cabang.</li>
                 <li>Mengambil keputusan operasional harian cabang.</li>
             </ol>
-            <h3>B. Tanggung Jawab:</h3>
+            <h3 id="h3">Tanggung Jawab</h3>
             <ol>
                 <li>Memastikan target cabang tercapai.</li>
-                <li>Menjamin kepatuhan terhadap SOP dan peraturan regulator.</li>
-                <li>Mengawasi dan mengontrol arus kas cabang.</li>
-                <li>Menjaga keamanan dan kelancaran operasional cabang.</li>
+                <li>Memastikan kepatuhan operasional cabang terhadap SOP dan regulasi OJK.</li>
+                <li>Menjamin keamanan dana, arsip, dan dokumen penting cabang.</li>
+                <li>Mengelola risiko kredit dan menjaga kualitas portofolio cabang.</li>
+                <li>Membina hubungan kerja yang baik antar karyawan.</li>
+                <li>Menyampaikan laporan akurat dan tepat waktu ke kantor pusat.</li>
             </ol>
         </section>
 
         <section id="sop">
-            <h2>III. Standar Operasional Prosedur (SOP) Kepala Cabang</h2>
+            <h2>III. Standar Operasional Prosedur (SOP)</h2>
 
-            <h3>A. Pengelolaan Operasional Cabang</h3>
+            <h3 id="h4">A. Manajemen Operasional</h3>
             <ol>
-                <li>Memimpin briefing pagi bersama seluruh staf cabang.</li>
-                <li>Mengevaluasi laporan harian operasional dan keuangan.</li>
-                <li>Memastikan pelayanan nasabah berjalan lancar.</li>
+                <li>Melakukan briefing pagi untuk pengarahan karyawan cabang.</li>
+                <li>Memantau realisasi target harian kredit, tabungan, dan penagihan.</li>
+                <li>Mengawasi kas harian, stok blanko, dan dokumen kredit.</li>
                 <li>Memantau kondisi fisik kantor dan keamanan aset.</li>
             </ol>
 
-            <h3>B. Pengelolaan Kredit dan Dana</h3>
+            <h3 id="h5">B. Manajemen Kredit</h3>
             <ol>
+                <li>Mengevaluasi aplikasi kredit sebelum diajukan ke pusat.</li>
                 <li>Mengawasi proses penyaluran kredit agar sesuai prosedur.</li>
-                <li>Mendorong pencapaian target penghimpunan dana.</li>
+                <li>Memantau kualitas kredit (kolektibilitas) cabang.</li>
+                <li>Mendorong pencapaian target penghimpunan dana dan penyaluran kredit.</li>
                 <li>Melakukan monitoring terhadap kredit bermasalah.</li>
             </ol>
 
-            <h3>C. Pembinaan dan Evaluasi Pegawai</h3>
+            <h3 id="h6">C. Layanan Nasabah</h3>
+            <ol>
+                <li>Menangani keluhan atau komplain nasabah dengan cepat.</li>
+                <li>Memastikan pelayanan cabang sesuai standar kualitas BPR.</li>
+                <li>Membangun komunikasi positif dengan komunitas lokal.</li>
+            </ol>
+
+            <h3 id="h7">C. Pembinaan dan Evaluasi Pegawai</h3>
             <ol>
                 <li>Memberikan arahan dan pelatihan bagi staf cabang.</li>
                 <li>Melakukan evaluasi kinerja secara berkala.</li>
                 <li>Menindaklanjuti pelanggaran disiplin kerja.</li>
             </ol>
 
-            <h3>D. Pelaporan</h3>
+            <h3 id="h8">D. Pelaporan</h3>
             <ol>
-                <li>Menyusun laporan operasional bulanan kepada kantor pusat.</li>
-                <li>Melaporkan masalah atau kendala operasional yang signifikan.</li>
-                <li>Menyampaikan usulan perbaikan dan pengembangan cabang.</li>
+                <li>Menyusun laporan kredit cabang (harian, mingguan, bulanan).</li>
+                <li>Melaporkan permasalahan operasional dan risiko ke kantor pusat.</li>
+                <li>Memberikan rekomendasi strategis untuk peningkatan kinerja cabang.</li>
             </ol>
         </section>
 
-        <section id="prilaku-kerja">
+        <section id="perilaku-kerja">
             <h2>IV. Aturan dan Perilaku Kerja</h2>
             <ol>
-                <li>Bersikap profesional, tegas, dan adil dalam memimpin.</li>
-                <li>Menjaga integritas dan citra perusahaan.</li>
-                <li>Mengutamakan kepentingan nasabah dan perusahaan di atas kepentingan pribadi.</li>
-                <li>Menggunakan seragam dan identitas kerja sesuai ketentuan.</li>
+                <li>Menjadi teladan dalam integritas, disiplin, dan profesionalisme.</li>
+                <li>Menjaga kerahasiaan informasi strategis BPR.</li>
+                <li>Mematuhi semua SOP, peraturan internal, dan ketentuan regulator.</li>
+                <li>Tidak melakukan penyalahgunaan jabatan atau wewenang.</li>
+                <li>Berperilaku adil terhadap seluruh karyawan cabang.</li>
             </ol>
         </section>
 
         <section id="catatan">
             <h2>V. Catatan Penting</h2>
             <p>
-                Kepala Cabang bertanggung jawab langsung kepada pimpinan BPR atas seluruh operasional cabang.  
-                Pelanggaran SOP atau target yang tidak tercapai dapat mempengaruhi penilaian kinerja.  
-                Semua kebijakan dan arahan dari kantor pusat wajib dilaksanakan tanpa pengecualian.
+                Kepala Cabang adalah garda terdepan dalam memastikan keberhasilan operasional dan pencapaian target bisnis BPR. 
+                Kepemimpinan yang baik, disiplin, dan kemampuan manajerial yang kuat akan mendukung pertumbuhan cabang dan 
+                memperkuat reputasi BPR di masyarakat.
             </p>
         </section>
     </main>
 
+    <!-- KOLOM KANAN -->
+    <aside class="accent"></aside>
+  </div>
+
+  <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 BPR - Manual Book Kepala Cabang</p>
+        <p>&copy; 2025 BPR - Manual Book Bagian Kepala Cabang</p>
     </footer>
 </body>
 </html>
 
+<script src="/js/script2.js" defer></script>
+
+<script>
+(function() {
+  function loadScript(src, onSuccess, onError) {
+    const s = document.createElement("script");
+    s.src = src;
+    s.defer = true;
+    s.onload = onSuccess;
+    s.onerror = onError;
+    document.head.appendChild(s);
+  }
+
+  loadScript("/js/script2.js", 
+    function() {
+      console.log("✅ script2.js berhasil dimuat");
+    },
+    function() {
+      console.warn("⚠️ script2.js tidak ada, coba fallback ke script.js");
+      loadScript("/js/script.js", function() {
+        console.log("✅ script.js berhasil dimuat sebagai fallback");
+      });
+    }
+  );
+})();
+</script>
