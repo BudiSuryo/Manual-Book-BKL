@@ -57,7 +57,7 @@ header {
 .title .sub { opacity: .9; font-size: 20px; }
 
 /* Nav */
-nav.top { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+nav.top { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; margin-bottom: 8px;}
 nav.top a {
   text-decoration: none; background: #ffffff22; color: #fff;
   padding: 8px 12px; border-radius: 999px;
