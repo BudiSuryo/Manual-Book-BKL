@@ -270,3 +270,29 @@ button:hover { background-color: #005fa3; }
   padding: 2px 4px;
   border-radius: 3px;
 }
+
+/* Search bar container */
+.search-bar {
+  width: 100%;
+  max-width: 320px;   /* atur lebar maksimal */
+  margin: 16px auto;  /* biar ada jarak dan posisinya center */
+  text-align: center;
+}
+
+/* Dropdown di dalam search-bar */
+.search-bar select {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-bar select:focus {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 2px rgba(10, 61, 98, 0.2);
+}
+
