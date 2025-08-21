@@ -3,31 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual Book Kepala Bagian Kredit - BPR</title>
-    <link rel="stylesheet" href="css/style.css">
-     <script>
+    <title>Manual Book Bagian Kepala Bagian Kredit - BPR</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script>
     // Proteksi halaman (jalankan secepat mungkin sebelum konten ditampilkan)
     if (sessionStorage.getItem("isLoggedIn") !== "true") {
         window.location.href = "index.html";
     }
-  </script>
+    </script>
 </head>
 <body>
+<div class="wrap">
+    <!-- HEADER -->    
     <header>
-        <h1>Manual Book Kepala Bagian Kredit - BPR Kreo Lestari</h1>
-        <nav class="breadcrumb">
-            <a href="../index.html">Beranda</a> &gt; <span>Kepala Bagian Kredit</span>
-        </nav>
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Cari kata...">
-            <button id="searchButton">Cari</button>
+      <img src="../logo2.png" alt="Logo" class="logo">
+      <div class="brand-row">
+          <div class="title">
+          <h1>Manual Book Kepala Bagian Kredit</h1>
+          <div class="sub">BPR Kreo Lestari</div>
         </div>
+      </div>
+      <nav class="top">
+        <div class="breadcrumb">
+          <a href="../index.html">Beranda</a> &gt;
+          <a href="#">Kredit</a>
+        </div>
+      </nav>
     </header>
 
-    <main>
+    <!-- DROPDOWN NAV -->
+    <div class="search-bar">
+      <select id="headingDropdown" onchange="scrollToHeading(this.value)">
+        <option value="">-- Daftar Isi --</option>
+      </select>
+    </div>
+
+  <!-- GRID 3 KOLOM -->
+  <div class="grid-3col">
+    <!-- KOLOM KIRI -->
+    <aside class="accent"></aside>
+      
+    <main class="content">
         <section id="pendahuluan">
             <h2>Pendahuluan</h2>
-            <p>Manual Book ini memberikan panduan lengkap bagi Kepala Bagian Kredit dalam mengawasi dan mengendalikan seluruh kegiatan penyaluran kredit BPR, memastikan proses berjalan sesuai SOP, meminimalkan risiko kredit macet, dan mengelola tim kredit untuk mencapai target perusahaan.</p>
+            <p>
+                Manual Book ini memberikan panduan bagi Kepala Bagian Kredit dalam melaksanakan fungsi perencanaan, 
+                pengawasan, serta pengendalian aktivitas perkreditan agar sesuai dengan kebijakan internal BPR dan 
+                peraturan OJK yang berlaku.
+            </p>
         </section>
 
         <section id="jobdesc">
@@ -35,87 +58,130 @@
             <p>
                 <strong>Posisi:</strong> Kepala Bagian Kredit<br/>
                 <strong>Divisi:</strong> Kredit<br/>
-                <strong>Atasan Langsung:</strong> Kepala Cabang / Direktur Kredit
+                <strong>Atasan Langsung:</strong> Direktur Kredit / Kepala Cabang
             </p>
-            <h3>Tugas Utama:</h3>
+            <h3 id="h1">Tugas Utama</h3>
             <ol>
-                <li>Menyusun strategi penyaluran kredit sesuai target.</li>
-                <li>Mengawasi proses analisis dan persetujuan kredit.</li>
-                <li>Memastikan kelengkapan dokumen kredit.</li>
-                <li>Memantau kredit bermasalah dan melakukan penanganan.</li>
-                <li>Memberikan pembinaan kepada tim analis dan administrasi kredit.</li>
+                <li>Menyusun strategi dan kebijakan kredit sesuai arahan manajemen pusat.</li>
+                <li>Mengawasi seluruh proses pengajuan, analisis, persetujuan, dan pencairan kredit.</li>
+                <li>Menjadwalkan dan memimpin proses Komite Kredit.</li>
+                <li>Memastikan kualitas portofolio kredit tetap sehat (kolektibilitas lancar).</li>
+                <li>Melakukan evaluasi risiko kredit dan memberikan rekomendasi mitigasi.</li>
+                <li>Mengarahkan dan membina tim Analis dan Administrasi Kredit.</li>
+                <li>Menyusun laporan portofolio kredit secara berkala.</li>
+                <li>Menangani kasus kredit bermasalah (NPL) bersama tim koleksi.</li>
             </ol>
         </section>
 
         <section id="wewenang-tanggungjawab">
             <h2>II. Wewenang dan Tanggung Jawab</h2>
-            <h3>A. Wewenang:</h3>
+            <h3 id="h2">Wewenang</h3>
             <ol>
-                <li>Menentukan keputusan kredit sesuai limit kewenangan.</li>
-                <li>Menyetujui atau menolak rekomendasi kredit.</li>
-                <li>Memberikan arahan kerja kepada tim kredit.</li>
-                <li>Merekomendasikan kebijakan kredit ke manajemen.</li>
+                <li>Menjadwalkan dan memimpin Komite Kredit.</li>
+                <li>Menolak permohonan kredit yang tidak memenuhi kriteria.</li>
+                <li>Menentukan kebijakan penanganan kredit bermasalah tingkat cabang.</li>
+                <li>Mengevaluasi kinerja Analis dan Administrsi Kredit.</li>
             </ol>
-            <h3>B. Tanggung Jawab:</h3>
+            <h3 id="h3">Tanggung Jawab</h3>
             <ol>
-                <li>Memastikan target penyaluran kredit tercapai.</li>
-                <li>Menjaga rasio NPL tetap di bawah batas yang ditentukan.</li>
-                <li>Menjamin proses kredit sesuai SOP dan regulasi OJK.</li>
-                <li>Melaporkan kinerja kredit ke manajemen secara berkala.</li>
+                <li>Menjaga kualitas kredit agar NPL berada dalam batas aman.</li>
+                <li>Memastikan seluruh prosedur kredit berjalan sesuai SOP.</li>
+                <li>Memberikan laporan akurat mengenai posisi kredit tiap cabang.</li>
+                <li>Bersama Kacab melakukan monitoring secara rutin terhadap debitur berisiko.</li>
+                <li>Membina tim agar bekerja profesional dan berintegritas.</li>
             </ol>
         </section>
 
         <section id="sop">
             <h2>III. Standar Operasional Prosedur (SOP)</h2>
 
-            <h3>A. Perencanaan</h3>
+            <h3 id="h4">A. Proses Pengajuan Kredit</h3>
             <ol>
-                <li>Menyusun target penyaluran kredit tahunan dan bulanan.</li>
-                <li>Melakukan analisis potensi pasar kredit.</li>
+                <li>Analis menerima aplikasi kredit dari calon debitur yang sudah selesai di follow up AO Senior.</li>
+                <li>Kepala Bagian Kredit melakukan verifikasi ulang semua dokumen pengajuan kredit.</li>
+                <li>Melakukan analisis kelayakan (5C: Character, Capacity, Capital, Collateral, Condition).</li>
+                <li>Memberikan rekomendasi persetujuan atau penolakan kredit.</li>
+                <li>Melaksanakan komite kredit.</li>
             </ol>
 
-            <h3>B. Persetujuan Kredit</h3>
+            <h3 id="h5">B. Monitoring Kredit</h3>
             <ol>
-                <li>Memeriksa hasil analisis dan dokumen kredit dari analis.</li>
-                <li>Memberikan persetujuan sesuai limit atau meneruskan ke atasan.</li>
+                <li>Melakukan review portofolio kredit setiap minggu/bulan.</li>
+                <li>Memantau debitur dengan kolektibilitas DPK (Dalam Perhatian Khusus).</li>
+                <li>Mengarahkan AO dan Kolektor untuk follow-up nasabah menunggak.</li>
             </ol>
 
-            <h3>C. Monitoring Kredit</h3>
+            <h3 id="h6">C. Penanganan Kredit Bermasalah</h3>
             <ol>
-                <li>Memantau kualitas portofolio kredit secara rutin.</li>
-                <li>Melakukan tindakan pencegahan kredit bermasalah.</li>
+                <li>Menganalisis penyebab kredit bermasalah.</li>
+                <li>Menyusun strategi restrukturisasi atau penagihan intensif.</li>
+                <li>Bekerjasama dengan bagian hukum jika diperlukan.</li>
+                <li>Melaporkan NPL ke manajemen pusat.</li>
             </ol>
 
-            <h3>D. Pelaporan</h3>
+            <h3 id="h7">D. Pelaporan</h3>
             <ol>
-                <li>Menyusun laporan kinerja kredit setiap bulan.</li>
-                <li>Memberikan rekomendasi perbaikan kepada manajemen.</li>
+                <li>Menyusun laporan harian/mingguan/bulanan kredit cabang.</li>
+                <li>Memberikan analisis tren kredit kepada manajemen.</li>
+                <li>Menyampaikan rekomendasi strategis untuk peningkatan kualitas kredit.</li>
             </ol>
         </section>
 
         <section id="perilaku-kerja">
             <h2>IV. Aturan dan Perilaku Kerja</h2>
             <ol>
-                <li>Bersikap profesional, tegas, dan objektif dalam memutuskan kredit.</li>
-                <li>Menjaga kerahasiaan data nasabah.</li>
-                <li>Mengutamakan prinsip kehati-hatian dalam penyaluran kredit.</li>
-                <li>Mematuhi seluruh kebijakan BPR dan regulasi OJK.</li>
+                <li>Menjaga integritas dan profesionalisme dalam setiap keputusan kredit.</li>
+                <li>Mematuhi seluruh regulasi OJK dan SOP internal.</li>
+                <li>Tidak menerima gratifikasi atau imbalan dari nasabah.</li>
+                <li>Menjaga kerahasiaan informasi nasabah.</li>
+                <li>Bersikap objektif dan adil dalam penilaian kredit.</li>
             </ol>
         </section>
 
         <section id="catatan">
             <h2>V. Catatan Penting</h2>
             <p>
-                Kepala Bagian Kredit bertanggung jawab penuh atas kualitas kredit yang disalurkan.  
-                Pelanggaran SOP atau tingginya rasio NPL dapat mempengaruhi penilaian kinerja dan tindakan manajerial.  
-                Seluruh kebijakan dari manajemen wajib dilaksanakan dengan konsisten.
+                Kepala Bagian Kredit merupakan kunci dalam menjaga kualitas portofolio kredit dan keberlangsungan usaha BPR. 
+                Keputusan yang tepat, pengawasan yang ketat, dan integritas tinggi akan memperkuat posisi BPR sebagai lembaga 
+                keuangan yang sehat dan terpercaya.
             </p>
         </section>
     </main>
 
+    <!-- KOLOM KANAN -->
+    <aside class="accent"></aside>
+  </div>
+
+  <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 BPR - Manual Book Kepala Bagian Kredit</p>
+        <p>&copy; 2025 BPR - Manual Book Bagian Kepala Bagian Kredit</p>
     </footer>
 </body>
 </html>
 
+<script src="/js/script2.js" defer></script>
+
+<script>
+(function() {
+  function loadScript(src, onSuccess, onError) {
+    const s = document.createElement("script");
+    s.src = src;
+    s.defer = true;
+    s.onload = onSuccess;
+    s.onerror = onError;
+    document.head.appendChild(s);
+  }
+
+  loadScript("/js/script2.js", 
+    function() {
+      console.log("✅ script2.js berhasil dimuat");
+    },
+    function() {
+      console.warn("⚠️ script2.js tidak ada, coba fallback ke script.js");
+      loadScript("/js/script.js", function() {
+        console.log("✅ script.js berhasil dimuat sebagai fallback");
+      });
+    }
+  );
+})();
+</script>
