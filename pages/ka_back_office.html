@@ -3,47 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual Book Bagian Kepala Back Office - BPR</title>
-    <link rel="stylesheet" href="css/style.css">
-     <script>
+    <title>Manual Book Bagian Kepala Back-Office - BPR</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script>
     // Proteksi halaman (jalankan secepat mungkin sebelum konten ditampilkan)
     if (sessionStorage.getItem("isLoggedIn") !== "true") {
         window.location.href = "index.html";
     }
-  </script>
+    </script>
 </head>
 <body>
+<div class="wrap">
+    <!-- HEADER -->    
     <header>
-        <h1>Manual Book Bagian Kepala Back Office - BPR Kreo Lestari</h1>
-        <nav class="breadcrumb">
-            <a href="../index.html">Beranda</a> &gt; <span>Bagian Kepala Back Office</span>
-        </nav>
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Cari kata...">
-            <button id="searchButton">Cari</button>
+      <img src="../logo2.png" alt="Logo" class="logo">
+      <div class="brand-row">
+          <div class="title">
+          <h1>Manual Book Kepala Back-Office</h1>
+          <div class="sub">BPR Kreo Lestari</div>
         </div>
+      </div>
+      <nav class="top">
+        <div class="breadcrumb">
+          <a href="../index.html">Beranda</a> &gt;
+          <a href="#">Kepala Back-Office</a>
+        </div>
+      </nav>
     </header>
 
-    <main>
+    <!-- DROPDOWN NAV -->
+    <div class="search-bar">
+      <select id="headingDropdown" onchange="scrollToHeading(this.value)">
+        <option value="">-- Daftar Isi --</option>
+      </select>
+    </div>
+
+  <!-- GRID 3 KOLOM -->
+  <div class="grid-3col">
+    <!-- KOLOM KIRI -->
+    <aside class="accent"></aside>
+      
+    <main class="content">
         <section id="pendahuluan">
             <h2>Pendahuluan</h2>
             <p>
-                Manual Book ini memberikan panduan bagi Kepala Back Office dalam mengelola operasional administrasi BPR, 
+                Manual Book ini memberikan panduan bagi Kepala Back-Office dalam mengelola administrasi operasional BPR, 
                 termasuk verifikasi transaksi, pengarsipan dokumen, pengendalian administrasi kredit, tabungan, deposito, 
-                serta koordinasi dengan unit front office untuk memastikan kelancaran dan ketepatan proses bisnis.
+                serta koordinasi dengan unit front-office untuk memastikan kelancaran dan ketepatan proses bisnis.
             </p>
         </section>
 
         <section id="jobdesc">
             <h2>I. Job Description</h2>
             <p>
-                <strong>Posisi:</strong> Kepala Back Office<br/>
+                <strong>Posisi:</strong> Kepala Back-Office<br/>
                 <strong>Divisi:</strong> Operasional<br/>
-                <strong>Atasan Langsung:</strong> General Manager / Direktur Operasional
+                <strong>Atasan Langsung:</strong> Kepala Operasional / General Manager
             </p>
-            <h3>Tugas Utama:</h3>
+            <h3 id="h1">Tugas Utama</h3>
             <ol>
-                <li>Mengawasi seluruh aktivitas administrasi operasional bank di bagian back office.</li>
+                <li>Mengawasi seluruh aktivitas administrasi operasional bank di bagian back-office.</li>
                 <li>Memastikan verifikasi dan pencatatan seluruh transaksi dilakukan dengan benar.</li>
                 <li>Mengelola administrasi tabungan, deposito, dan produk lainnya.</li>
                 <li>Menyusun laporan operasional harian, mingguan, dan bulanan.</li>
@@ -55,17 +74,17 @@
 
         <section id="wewenang-tanggungjawab">
             <h2>II. Wewenang dan Tanggung Jawab</h2>
-            <h3>A. Wewenang:</h3>
+            <h3 id="h2">Wewenang</h3>
             <ol>
                 <li>Memberikan persetujuan akhir atas dokumen transaksi sebelum diproses.</li>
                 <li>Meminta informasi atau dokumen dari seluruh unit kerja terkait.</li>
                 <li>Menolak transaksi yang tidak sesuai dengan prosedur.</li>
             </ol>
-            <h3>B. Tanggung Jawab:</h3>
+            <h3 id="h3">Tanggung Jawab</h3>
             <ol>
                 <li>Menjamin keakuratan dan kelengkapan dokumen administrasi.</li>
                 <li>Memastikan seluruh transaksi dicatat sesuai ketentuan akuntansi dan perbankan.</li>
-                <li>Mencegah terjadinya kesalahan dan kecurangan di bagian back office.</li>
+                <li>Mencegah terjadinya kesalahan dan kecurangan di bagian back-office.</li>
                 <li>Mengkoordinasikan penyusunan laporan operasional untuk regulator dan manajemen.</li>
             </ol>
         </section>
@@ -73,22 +92,23 @@
         <section id="sop">
             <h2>III. Standar Operasional Prosedur (SOP)</h2>
 
-            <h3>A. Pengelolaan Administrasi Transaksi</h3>
+            <h3 id="h4">A. Pengelolaan Administrasi Transaksi</h3>
             <ol>
-                <li>Menerima dan memverifikasi dokumen dari front office.</li>
+                <li>Menerima dan memverifikasi dokumen dari front-office.</li>
                 <li>Memastikan pencatatan transaksi sesuai data yang diterima.</li>
                 <li>Menyimpan bukti transaksi dalam arsip yang terstruktur.</li>
             </ol>
 
-            <h3>B. Administrasi Tabungan dan Deposito</h3>
+            <h3 id="h5">B. Administrasi Tabungan dan Deposito</h3>
             <ol>
                 <li>Memastikan pembukaan, perubahan, dan penutupan rekening sesuai prosedur.</li>
                 <li>Mengarsipkan dokumen pembukaan rekening, bilyet deposito, dan mutasi rekening.</li>
+                <li>Melakukan rekonsiliasi data rekening secara berkala.</li>
             </ol>
 
-            <h3>C. Pelaporan</h3>
+            <h3 id="h6">C. Pelaporan</h3>
             <ol>
-                <li>Menyusun laporan transaksi harian dan bulanan.</li>
+                <li>Menyusun laporan transaksi harian, mingguan, dan bulanan.</li>
                 <li>Melaporkan data yang diperlukan kepada regulator (OJK/BI) tepat waktu.</li>
             </ol>
         </section>
@@ -106,16 +126,49 @@
         <section id="catatan">
             <h2>V. Catatan Penting</h2>
             <p>
-                Kepala Back Office memegang peranan penting dalam memastikan kelancaran operasional dan administrasi BPR. 
+                Kepala Back-Office memegang peranan penting dalam memastikan kelancaran operasional dan administrasi BPR. 
                 Kesalahan dalam verifikasi dan pencatatan dapat berdampak langsung pada keuangan dan reputasi perusahaan. 
                 Oleh karena itu, setiap tugas harus dilaksanakan secara teliti, sesuai prosedur, dan tepat waktu.
             </p>
         </section>
     </main>
 
+    <!-- KOLOM KANAN -->
+    <aside class="accent"></aside>
+  </div>
+
+  <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 BPR - Manual Book Bagian Kepala Back Office</p>
+        <p>&copy; 2025 BPR - Manual Book Bagian Kepala Back-Office</p>
     </footer>
 </body>
 </html>
 
+<script src="/js/script2.js" defer></script>
+
+<script>
+(function() {
+  // fungsi untuk load script dinamis
+  function loadScript(src, onSuccess, onError) {
+    const s = document.createElement("script");
+    s.src = src;
+    s.defer = true;
+    s.onload = onSuccess;
+    s.onerror = onError;
+    document.head.appendChild(s);
+  }
+
+  // coba load script2.js dulu
+  loadScript("/js/script2.js", 
+    function() {
+      console.log("✅ script2.js berhasil dimuat");
+    },
+    function() {
+      console.warn("⚠️ script2.js tidak ada, coba fallback ke script.js");
+      loadScript("/js/script.js", function() {
+        console.log("✅ script.js berhasil dimuat sebagai fallback");
+      });
+    }
+  );
+})();
+</script>
