@@ -1,5 +1,7 @@
 // validateLogin.js
 const passwords = {
+    "pages/dir-bisnis.html": "1234",
+    "pages/dir-ops.html": "1234",
     "pages/kasir.html": "1234",
     "pages/tabungan.html": "1234",
     "pages/kolektor.html": "1234",
