@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Book Direktur Operasional - BPR</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script>
+    // Proteksi halaman (jalankan secepat mungkin sebelum konten ditampilkan)
+    if (sessionStorage.getItem("isLoggedIn") !== "true") {
+        window.location.href = "index.html";
+    }
+    </script>
+</head>
+<body>
+<div class="wrap">
+    <!-- HEADER -->    
+    <header>
+      <img src="../logo2.png" alt="Logo" class="logo">
+      <div class="brand-row">
+          <div class="title">
+          <h1>Manual Book Direktur Operasional</h1>
+          <div class="sub">BPR Kreo Lestari</div>
+        </div>
+      </div>
+      <nav class="top">
+        <div class="breadcrumb">
+          <a href="../index.html">Beranda</a> &gt;
+          <a href="#">Direktur Operasional</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- DROPDOWN NAV -->
+    <div class="search-bar">
+      <select id="headingDropdown" onchange="scrollToHeading(this.value)">
+        <option value="">-- Daftar Isi --</option>
+      </select>
+    </div>
+
+  <!-- GRID 3 KOLOM -->
+  <div class="grid-3col">
+    <!-- KOLOM KIRI -->
+    <aside class="accent"></aside>
+      
+    <main class="content">
+        <section id="pendahuluan">
+            <h2>Pendahuluan</h2>
+            <p>
+                Manual Book ini memberikan panduan bagi Direktur Operasional dalam 
+                mengawasi, mengendalikan, dan memastikan seluruh aktivitas operasional BPR 
+                berjalan lancar, efisien, aman, dan sesuai dengan ketentuan regulasi. 
+                Fungsi ini meliputi manajemen cabang, pelayanan nasabah, administrasi, 
+                kepatuhan, teknologi informasi, dan pengelolaan risiko operasional.
+            </p>
+        </section>
+
+        <section id="jobdesc">
+            <h2>I. Job Description</h2>
+            <p>
+                <strong>Posisi:</strong> Direktur Operasional<br/>
+                <strong>Divisi:</strong> Direksi<br/>
+                <strong>Atasan Langsung:</strong> Direktur Utama / Dewan Komisaris
+            </p>
+            <h3 id="h1">Tugas Utama</h3>
+            <ol>
+                <li>Mengelola dan mengawasi seluruh aspek operasional BPR (pusat & cabang).</li>
+                <li>Menjamin kepatuhan terhadap regulasi OJK, BI, dan kebijakan internal.</li>
+                <li>Mengarahkan GM Operasional dan unit kerja terkait.</li>
+                <li>Memastikan pelayanan nasabah berjalan cepat, tepat, dan berkualitas.</li>
+                <li>Menyusun dan memperbarui SOP operasional BPR.</li>
+                <li>Mengawasi sistem teknologi informasi dan keamanan data.</li>
+                <li>Mengelola risiko operasional dan pengendalian internal.</li>
+                <li>Menangani audit internal maupun eksternal terkait operasional.</li>
+                <li>Menjamin keamanan fisik, aset, dokumen, dan transaksi perusahaan.</li>
+                <li>Menyusun laporan kinerja operasional untuk Direksi dan Komisaris.</li>
+            </ol>
+        </section>
+
+        <section id="wewenang-tanggungjawab">
+            <h2>II. Wewenang dan Tanggung Jawab</h2>
+            <h3 id="h2">Wewenang</h3>
+            <ol>
+                <li>Menentukan kebijakan teknis operasional harian.</li>
+                <li>Memberikan persetujuan atas transaksi tertentu sesuai limit kewenangan.</li>
+                <li>Memberikan arahan dan evaluasi terhadap GM Operasional dan tim.</li>
+                <li>Menjalin komunikasi dengan regulator dan pihak ketiga terkait operasional.</li>
+            </ol>
+            <h3 id="h3">Tanggung Jawab</h3>
+            <ol>
+                <li>Menjamin kelancaran dan keamanan seluruh proses operasional BPR.</li>
+                <li>Menjaga kepatuhan pada regulasi dan prinsip tata kelola (GCG).</li>
+                <li>Mengelola risiko operasional secara proaktif.</li>
+                <li>Menjaga kualitas layanan prima bagi nasabah.</li>
+            </ol>
+        </section>
+
+        <section id="sop">
+            <h2>III. Standar Operasional Prosedur (SOP)</h2>
+
+            <h3 id="h4">A. Manajemen Operasional</h3>
+            <ol>
+                <li>Menyusun dan memperbarui SOP operasional secara berkala.</li>
+                <li>Melakukan koordinasi rutin dengan unit kerja dan cabang.</li>
+                <li>Menetapkan standar layanan operasional di seluruh unit.</li>
+            </ol>
+
+            <h3 id="h5">B. Implementasi Layanan</h3>
+            <ol>
+                <li>Mengawasi pelayanan teller, customer service, back office, dan kredit support.</li>
+                <li>Memastikan transaksi keuangan akurat, transparan, dan aman.</li>
+                <li>Mengawasi penggunaan sistem TI dan menjaga keamanan data.</li>
+            </ol>
+
+            <h3 id="h6">C. Monitoring dan Evaluasi</h3>
+            <ol>
+                <li>Melakukan monitoring harian, mingguan, dan bulanan atas aktivitas operasional.</li>
+                <li>Menindaklanjuti rekomendasi hasil audit internal dan eksternal.</li>
+                <li>Menyusun laporan operasional kepada Direksi dan Komisaris.</li>
+            </ol>
+        </section>
+
+        <section id="perilaku-kerja">
+            <h2>IV. Aturan dan Perilaku Kerja</h2>
+            <ol>
+                <li>Menjaga integritas, kedisiplinan, dan profesionalisme.</li>
+                <li>Mengutamakan ketelitian dan akurasi dalam semua proses kerja.</li>
+                <li>Bekerja sesuai SOP, regulasi, dan prinsip kehati-hatian.</li>
+                <li>Menjalin komunikasi efektif dengan tim, regulator, dan mitra eksternal.</li>
+            </ol>
+        </section>
+
+        <section id="catatan">
+            <h2>V. Catatan Penting</h2>
+            <p>
+                Direktur Operasional memegang peran kunci dalam menjaga stabilitas dan 
+                keberlangsungan BPR. Efisiensi operasional, kepatuhan regulasi, dan kualitas 
+                layanan yang konsisten akan menentukan tingkat kepercayaan nasabah serta 
+                reputasi perusahaan di mata regulator dan masyarakat.
+            </p>
+        </section>
+    </main>
+
+    <!-- KOLOM KANAN -->
+    <aside class="accent"></aside>
+  </div>
+
+  <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 BPR - Manual Book Direktur Operasional</p>
+    </footer>
+</body>
+</html>
+
+<script src="/js/script2.js" defer></script>
+
+<script>
+(function() {
+  // fungsi untuk load script dinamis
+  function loadScript(src, onSuccess, onError) {
+    const s = document.createElement("script");
+    s.src = src;
+    s.defer = true;
+    s.onload = onSuccess;
+    s.onerror = onError;
+    document.head.appendChild(s);
+  }
+
+  // coba load script2.js dulu
+  loadScript("/js/script2.js", 
+    function() {
+      console.log("✅ script2.js berhasil dimuat");
+    },
+    function() {
+      console.warn("⚠️ script2.js tidak ada, coba fallback ke script.js");
+      loadScript("/js/script.js", function() {
+        console.log("✅ script.js berhasil dimuat sebagai fallback");
+      });
+    }
+  );
+})();
+</script>
