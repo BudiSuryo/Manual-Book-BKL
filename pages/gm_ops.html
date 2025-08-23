@@ -3,34 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual Book GM Operasional - BPR</title>
-    <link rel="stylesheet" href="css/style.css">
-     <script>
+    <title>Manual Book Bagian GM Operasional - BPR</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script>
     // Proteksi halaman (jalankan secepat mungkin sebelum konten ditampilkan)
     if (sessionStorage.getItem("isLoggedIn") !== "true") {
         window.location.href = "index.html";
     }
-  </script>
+    </script>
 </head>
 <body>
+<div class="wrap">
+    <!-- HEADER -->    
     <header>
-        <h1>Manual Book GM Operasional - BPR Kreo Lestari</h1>
-        <nav class="breadcrumb">
-            <a href="../index.html">Beranda</a> &gt; <span>GM Operasional</span>
-        </nav>
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Cari kata...">
-            <button id="searchButton">Cari</button>
+      <img src="../logo2.png" alt="Logo" class="logo">
+      <div class="brand-row">
+          <div class="title">
+          <h1>Manual Book GM Operasional</h1>
+          <div class="sub">BPR Kreo Lestari</div>
         </div>
+      </div>
+      <nav class="top">
+        <div class="breadcrumb">
+          <a href="../index.html">Beranda</a> &gt;
+          <a href="#">GM Operasional</a>
+        </div>
+      </nav>
     </header>
 
-    <main>
+    <!-- DROPDOWN NAV -->
+    <div class="search-bar">
+      <select id="headingDropdown" onchange="scrollToHeading(this.value)">
+        <option value="">-- Daftar Isi --</option>
+      </select>
+    </div>
+
+  <!-- GRID 3 KOLOM -->
+  <div class="grid-3col">
+    <!-- KOLOM KIRI -->
+    <aside class="accent"></aside>
+      
+    <main class="content">
         <section id="pendahuluan">
             <h2>Pendahuluan</h2>
             <p>
-                Manual Book ini memberikan panduan bagi General Manager (GM) Operasional dalam memimpin,
-                mengawasi, dan mengendalikan seluruh aktivitas operasional BPR, memastikan seluruh proses berjalan
-                sesuai kebijakan perusahaan, regulasi OJK, dan target kinerja yang telah ditetapkan.
+                Manual Book ini memberikan panduan bagi GM Operasional dalam mengelola, 
+                mengawasi, dan memastikan kelancaran seluruh kegiatan operasional BPR, 
+                termasuk pelayanan nasabah, administrasi kredit, operasional kas, 
+                kepatuhan regulasi, serta pengembangan sistem dan prosedur kerja 
+                yang efektif dan efisien.
             </p>
         </section>
 
@@ -39,88 +60,123 @@
             <p>
                 <strong>Posisi:</strong> General Manager Operasional<br/>
                 <strong>Divisi:</strong> Operasional<br/>
-                <strong>Atasan Langsung:</strong> Direktur Utama / Direktur Operasional
+                <strong>Atasan Langsung:</strong> Direktur Utama
             </p>
-            <h3>Tugas Utama:</h3>
+            <h3 id="h1">Tugas Utama</h3>
             <ol>
-                <li>Memimpin dan mengkoordinasikan seluruh fungsi operasional BPR.</li>
-                <li>Memastikan kepatuhan terhadap SOP, regulasi OJK, dan kebijakan internal.</li>
-                <li>Menyusun strategi operasional untuk meningkatkan efisiensi dan pelayanan.</li>
-                <li>Mengevaluasi kinerja cabang dan memberikan arahan perbaikan.</li>
-                <li>Mengelola sumber daya operasional secara optimal.</li>
+                <li>Mengelola dan mengawasi seluruh aktivitas operasional kantor pusat dan cabang.</li>
+                <li>Menjamin kelancaran proses pelayanan nasabah (tabungan, deposito, kredit, kas).</li>
+                <li>Memastikan kepatuhan operasional terhadap kebijakan internal dan regulasi OJK/BI.</li>
+                <li>Mengarahkan dan membina tim operasional (teller, CS, back office, kredit support).</li>
+                <li>Menyusun, menerapkan, dan memperbarui SOP operasional BPR.</li>
+                <li>Menangani audit internal dan eksternal terkait operasional.</li>
+                <li>Mengawasi manajemen risiko operasional dan pengendalian internal.</li>
+                <li>Menjamin keamanan aset, dokumen, dan data perusahaan.</li>
+                <li>Menyusun laporan berkala mengenai kinerja operasional.</li>
+                <li>Memberikan masukan strategis kepada Direksi terkait efisiensi operasional.</li>
             </ol>
         </section>
 
         <section id="wewenang-tanggungjawab">
             <h2>II. Wewenang dan Tanggung Jawab</h2>
-            <h3>A. Wewenang:</h3>
+            <h3 id="h2">Wewenang</h3>
             <ol>
-                <li>Menentukan kebijakan operasional harian BPR.</li>
-                <li>Menyetujui rencana kerja dan anggaran operasional.</li>
-                <li>Mengambil keputusan strategis terkait kelancaran operasional.</li>
-                <li>Mengarahkan seluruh kepala bagian operasional di kantor pusat dan cabang.</li>
+                <li>Menentukan kebijakan teknis operasional harian.</li>
+                <li>Memberikan arahan dan evaluasi terhadap seluruh tim operasional.</li>
+                <li>Menyetujui transaksi operasional tertentu sesuai limit kewenangan.</li>
+                <li>Menjalin koordinasi dengan regulator dan pihak ketiga terkait layanan operasional.</li>
             </ol>
-            <h3>B. Tanggung Jawab:</h3>
+            <h3 id="h3">Tanggung Jawab</h3>
             <ol>
                 <li>Menjamin kelancaran seluruh proses operasional BPR.</li>
-                <li>Memastikan pelayanan kepada nasabah berjalan optimal.</li>
-                <li>Mengawasi kepatuhan terhadap regulasi dan kebijakan perusahaan.</li>
-                <li>Melaporkan perkembangan operasional kepada Direksi secara berkala.</li>
+                <li>Menjaga kepatuhan terhadap regulasi perbankan, OJK, dan BI.</li>
+                <li>Mengelola risiko dan melakukan pengendalian internal.</li>
+                <li>Menjaga kualitas pelayanan prima kepada nasabah.</li>
             </ol>
         </section>
 
         <section id="sop">
             <h2>III. Standar Operasional Prosedur (SOP)</h2>
 
-            <h3>A. Perencanaan Operasional</h3>
+            <h3 id="h4">A. Manajemen Operasional</h3>
             <ol>
-                <li>Menyusun rencana kerja tahunan dan bulanan operasional BPR.</li>
-                <li>Menetapkan target kinerja bagi cabang dan divisi pendukung.</li>
+                <li>Menyusun dan memperbarui SOP operasional secara berkala.</li>
+                <li>Melakukan koordinasi rutin dengan unit kerja terkait.</li>
+                <li>Memastikan kepatuhan terhadap prosedur kerja.</li>
             </ol>
 
-            <h3>B. Pengawasan Operasional</h3>
+            <h3 id="h5">B. Implementasi Layanan</h3>
             <ol>
-                <li>Melakukan monitoring harian terhadap seluruh aktivitas operasional.</li>
-                <li>Melakukan kunjungan rutin ke cabang untuk evaluasi kinerja.</li>
+                <li>Mengawasi proses pelayanan nasabah di teller, CS, dan back office.</li>
+                <li>Memastikan ketepatan pencatatan transaksi dan dokumentasi kredit.</li>
+                <li>Mengawasi keamanan transaksi kas harian.</li>
             </ol>
 
-            <h3>C. Penanganan Masalah</h3>
+            <h3 id="h6">C. Monitoring dan Evaluasi</h3>
             <ol>
-                <li>Menindaklanjuti laporan kendala dari cabang dan divisi operasional.</li>
-                <li>Mengambil langkah korektif untuk mengatasi hambatan operasional.</li>
-            </ol>
-
-            <h3>D. Pelaporan</h3>
-            <ol>
-                <li>Menyusun laporan kinerja operasional bulanan kepada Direksi.</li>
-                <li>Merekomendasikan perbaikan proses untuk meningkatkan efisiensi.</li>
+                <li>Melakukan monitoring harian terhadap aktivitas operasional.</li>
+                <li>Melaksanakan audit internal dan tindak lanjut rekomendasi auditor.</li>
+                <li>Menyusun laporan kinerja operasional bulanan untuk Direksi.</li>
             </ol>
         </section>
 
         <section id="perilaku-kerja">
             <h2>IV. Aturan dan Perilaku Kerja</h2>
             <ol>
-                <li>Bersikap profesional, tegas, dan berintegritas dalam memimpin.</li>
-                <li>Menjaga kerahasiaan data dan informasi perusahaan.</li>
-                <li>Mengutamakan kualitas pelayanan dan efisiensi kerja.</li>
-                <li>Mematuhi semua kebijakan perusahaan dan regulasi yang berlaku.</li>
+                <li>Menjaga integritas, kerahasiaan, dan keamanan data perusahaan.</li>
+                <li>Mengutamakan ketelitian dalam setiap proses administrasi.</li>
+                <li>Bekerja sesuai prosedur dan regulasi yang berlaku.</li>
+                <li>Menjaga komunikasi efektif dengan tim dan regulator.</li>
             </ol>
         </section>
 
         <section id="catatan">
             <h2>V. Catatan Penting</h2>
             <p>
-                GM Operasional bertanggung jawab penuh atas kelancaran operasional BPR secara keseluruhan.
-                Pelanggaran SOP atau kegagalan dalam mencapai target dapat mempengaruhi evaluasi kinerja dan
-                pengambilan keputusan manajemen. Semua kebijakan yang ditetapkan Direksi wajib dilaksanakan
-                tanpa pengecualian.
+                GM Operasional merupakan tulang punggung dalam memastikan seluruh aktivitas 
+                BPR berjalan sesuai standar dan regulasi. Efisiensi, kepatuhan, serta 
+                kualitas layanan yang terjaga akan menentukan kepercayaan nasabah dan 
+                keberlanjutan perusahaan.
             </p>
         </section>
     </main>
 
+    <!-- KOLOM KANAN -->
+    <aside class="accent"></aside>
+  </div>
+
+  <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 BPR - Manual Book GM Operasional</p>
+        <p>&copy; 2025 BPR - Manual Book Bagian GM Operasional</p>
     </footer>
 </body>
 </html>
 
+<script src="/js/script2.js" defer></script>
+
+<script>
+(function() {
+  // fungsi untuk load script dinamis
+  function loadScript(src, onSuccess, onError) {
+    const s = document.createElement("script");
+    s.src = src;
+    s.defer = true;
+    s.onload = onSuccess;
+    s.onerror = onError;
+    document.head.appendChild(s);
+  }
+
+  // coba load script2.js dulu
+  loadScript("/js/script2.js", 
+    function() {
+      console.log("✅ script2.js berhasil dimuat");
+    },
+    function() {
+      console.warn("⚠️ script2.js tidak ada, coba fallback ke script.js");
+      loadScript("/js/script.js", function() {
+        console.log("✅ script.js berhasil dimuat sebagai fallback");
+      });
+    }
+  );
+})();
+</script>
