@@ -15,6 +15,8 @@ const passwords = {
     "pages/kabag_kredit.html": "1234",
     "pages/kacab.html": "1234",
     "pages/legal.html": "1234",
+    "pages/ga-umum.html": "1234",
+    "pages/keuangan.html": "1234",
     "pages/untukteshtml.html": "1111"
 };
 
