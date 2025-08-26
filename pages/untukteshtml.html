@@ -3,43 +3,25 @@
 <script src="https://cdn.balkan.app/orgchart.js"></script>
 <head>
   <meta charset="UTF-8">
-  <title>Demo Dropdown Heading</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      padding: 20px;
-    }
-    .search-bar {  
-      margin-bottom: 20px;
-    }
-    h3 {
-      margin-top: 50px;
-      color: darkblue;
-    }
-  </style>
+  <title>Demo Chart</title>
+  
 </head>
 <body>
-  <div class="search-bar">
-    <label for="headingDropdown">Pilih Judul Section:</label>
-    <select id="headingDropdown">
-      <option value="">-- Pilih Heading --</option>
-    </select>    
-  </div>
+  <div id="tree"></div>
+    <script>
 
-  <!-- Semua konten yang punya <h3> HARUS di dalam #textContent -->
-  <div id="textContent">
-    <h3>Pendahuluan</h3>
-    <p>Lorem ipsum dolor sit amet, bagian ini berisi pengantar.</p>
-
-    <h3>Metodologi</h3>
-    <p>Berikut adalah metode penelitian atau alur kerja yang digunakan.</p>
-
-    <h3>Kesimpulan</h3>
-    <p>Ringkasan akhir dan saran perbaikan.</p>
-  </div>
-
-  <!-- Panggil file JS -->
-  <script src="js/search.js"></script>
+    let chart = new OrgChart("#tree", {
+        // options
+        nodeBinding: {
+            field_0: "name"
+        },
+        nodes: [
+            { id: 1, name: "Amber McKenzie" },
+            { id: 2, pid: 1, name: "Ava Field" },
+            { id: 3, pid: 1, name: "Peter Stevens" }
+        ]  
+    });
+ 
+</script>
 </body>
 </html>
