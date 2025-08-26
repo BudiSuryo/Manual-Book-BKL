@@ -17,7 +17,7 @@ const passwords = {
     "pages/legal.html": "1234",
     "pages/ga-umum.html": "1234",
     "pages/keuangan.html": "1234",
-    "pages/untukteshtml.html": "1111"
+    "pages/untukteshtml.html": "2901"
 };
 
 function validateLogin() {
