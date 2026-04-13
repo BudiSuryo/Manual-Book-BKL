@@ -8,11 +8,14 @@ public_folder: "/assets/img"
 collections:
   - name: "panduan"
     label: "Update Isi Manual Book"
-    folder: "content"
-    create: true
+    folder: "content" # CMS akan membaca semua file di folder ini
+    extension: "md"
+    format: "frontmatter"
+    create: true # Bisa buat file baru
+    editor:
+      preview: true # Memastikan fitur preview aktif
     slug: "{{slug}}"
     fields:
-      - {label: "ID Bagian", name: "id_bagian", widget: "select", options: ["adm_kredit", "analis", "audit", "kasir", "tabungan"]}
-      - {label: "Judul Panduan", name: "title", widget: "string"}
-      - {label: "Gambar Dokumentasi", name: "image", widget: "image", required: false}
+      - {label: "Judul Halaman", name: "title", widget: "string"}
+      - {label: "Gambar Utama", name: "image", widget: "image", required: false}
       - {label: "Isi Panduan", name: "body", widget: "markdown"}
