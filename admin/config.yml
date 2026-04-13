@@ -1,18 +1,44 @@
 backend:
   name: git-gateway
-  branch: main # Pastikan sesuai dengan branch utama kamu
+  branch: main
 
-media_folder: "assets/img" # Folder tempat menyimpan gambar yang diupload
+media_folder: "assets/img" # Folder tempat gambar tersimpan
 public_folder: "/assets/img"
 
 collections:
-  - name: "panduan"
-    label: "Daftar Panduan"
-    folder: "pages" # Folder tempat file panduan kamu berada
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Judul", name: "title", widget: "string"}
-      - {label: "Tanggal Publish", name: "date", widget: "datetime"}
-      - {label: "Gambar Ilustrasi", name: "image", widget: "image"}
-      - {label: "Isi Panduan", name: "body", widget: "markdown"}
+  - name: "manual_pages"
+    label: "Isi Manual Book (Per Bagian)"
+    files:
+      - label: "Adm Kredit"
+        name: "adm_kredit"
+        file: "pages/adm_kredit.html"
+        fields:
+          - {label: "Judul Halaman", name: "title", widget: "string"}
+          - {label: "Gambar Unggulan", name: "image", widget: "image"}
+          - {label: "Konten Panduan", name: "body", widget: "markdown"}
+
+      - label: "Analis"
+        name: "analis"
+        file: "pages/analis.html"
+        fields:
+          - {label: "Judul Halaman", name: "title", widget: "string"}
+          - {label: "Gambar Unggulan", name: "image", widget: "image"}
+          - {label: "Konten Panduan", name: "body", widget: "markdown"}
+
+      - label: "Audit"
+        name: "audit"
+        file: "pages/audit.html"
+        fields:
+          - {label: "Judul Halaman", name: "title", widget: "string"}
+          - {label: "Gambar Unggulan", name: "image", widget: "image"}
+          - {label: "Konten Panduan", name: "body", widget: "markdown"}
+
+      - label: "Kasir"
+        name: "kasir"
+        file: "pages/kasir.html"
+        fields:
+          - {label: "Judul Halaman", name: "title", widget: "string"}
+          - {label: "Gambar Unggulan", name: "image", widget: "image"}
+          - {label: "Konten Panduan", name: "body", widget: "markdown"}
+
+      # Kamu bisa menambah role lain (Tabungan, Keuangan, dll) dengan pola yang sama di sini
