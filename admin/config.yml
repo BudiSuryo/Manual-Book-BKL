@@ -2,43 +2,17 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "assets/img" # Folder tempat gambar tersimpan
+media_folder: "assets/img"
 public_folder: "/assets/img"
 
 collections:
-  - name: "manual_pages"
-    label: "Isi Manual Book (Per Bagian)"
-    files:
-      - label: "Adm Kredit"
-        name: "adm_kredit"
-        file: "pages/adm_kredit.html"
-        fields:
-          - {label: "Judul Halaman", name: "title", widget: "string"}
-          - {label: "Gambar Unggulan", name: "image", widget: "image"}
-          - {label: "Konten Panduan", name: "body", widget: "markdown"}
-
-      - label: "Analis"
-        name: "analis"
-        file: "pages/analis.html"
-        fields:
-          - {label: "Judul Halaman", name: "title", widget: "string"}
-          - {label: "Gambar Unggulan", name: "image", widget: "image"}
-          - {label: "Konten Panduan", name: "body", widget: "markdown"}
-
-      - label: "Audit"
-        name: "audit"
-        file: "pages/audit.html"
-        fields:
-          - {label: "Judul Halaman", name: "title", widget: "string"}
-          - {label: "Gambar Unggulan", name: "image", widget: "image"}
-          - {label: "Konten Panduan", name: "body", widget: "markdown"}
-
-      - label: "Kasir"
-        name: "kasir"
-        file: "pages/kasir.html"
-        fields:
-          - {label: "Judul Halaman", name: "title", widget: "string"}
-          - {label: "Gambar Unggulan", name: "image", widget: "image"}
-          - {label: "Konten Panduan", name: "body", widget: "markdown"}
-
-      # Kamu bisa menambah role lain (Tabungan, Keuangan, dll) dengan pola yang sama di sini
+  - name: "panduan"
+    label: "Update Isi Manual Book"
+    folder: "content" # Kita pindah ke folder khusus konten
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "ID Bagian", name: "id_bagian", widget: "select", options: ["adm_kredit", "analis", "audit", "kasir", "tabungan"]}
+      - {label: "Judul Panduan", name: "title", widget: "string"}
+      - {label: "Gambar Dokumentasi", name: "image", widget: "image", required: false}
+      - {label: "Isi Panduan", name: "body", widget: "markdown"}
