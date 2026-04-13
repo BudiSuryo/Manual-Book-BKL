@@ -8,7 +8,7 @@ public_folder: "/assets/img"
 collections:
   - name: "panduan"
     label: "Update Isi Manual Book"
-    folder: "content" # Kita pindah ke folder khusus konten
+    folder: "content"
     create: true
     slug: "{{slug}}"
     fields:
