@@ -3,11 +3,37 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Content Manager - Manual Book BKL</title>
+  <title>Admin Dashboard - Manual Book</title>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-  <!-- Script CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  
+  <script>
+    // 1. Memasukkan CSS agar preview terlihat sama dengan aslinya
+    // Ganti path-nya sesuai lokasi CSS kamu (misal: /css/style.css)
+    CMS.registerPreviewStyle("/css/style.css"); 
+    // Jika pakai Bootstrap dari CDN, masukkan juga:
+    CMS.registerPreviewStyle("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css");
+
+    // 2. Membersihkan Preview agar hanya menampilkan isi konten (bukan kode mentah)
+    var PostPreview = createClass({
+      render: function() {
+        var entry = this.props.entry;
+        var image = entry.getIn(['data', 'image']);
+        var bg = this.props.getAsset(image);
+        
+        return h('div', { className: 'container mt-4' },
+          h('h1', {}, entry.getIn(['data', 'title'])),
+          image ? h('img', {src: bg.toString(), style: {width: '100%', borderRadius: '10px'}}) : null,
+          h('div', {className: 'content-body', style: {marginTop: '20px'}},
+            this.props.widgetFor('body')
+          )
+        );
+      }
+    });
+
+    CMS.registerPreviewTemplate("manual_pages", PostPreview);
+  </script>
 </body>
 </html>
