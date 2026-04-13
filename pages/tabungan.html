@@ -32,11 +32,48 @@
     </header>
 
     <!-- DROPDOWN NAV -->
-    <div class="search-bar">
-      <select id="headingDropdown" onchange="scrollToHeading(this.value)">
-        <option value="">-- Daftar Isi --</option>
-      </select>
-    </div>
+<div class="search-bar">
+  <select id="headingDropdown" onchange="scrollToHeading(this.value)">
+    <option value="">-- Pilih Topik Panduan --</option>
+  </select>
+</div>
+
+<!-- Script Pemanggil & Pembuat Daftar Isi -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+  fetch('../content/adm-kredit.md')
+    .then(response => response.text())
+    .then(text => {
+      const content = text.split('---').pop();
+      const htmlContent = marked.parse(content);
+      document.getElementById('isi-panduan-otomatis').innerHTML = htmlContent;
+
+      // --- OTOMATISASI DAFTAR ISI ---
+      const displayArea = document.getElementById('isi-panduan-otomatis');
+      const dropdown = document.getElementById('headingDropdown');
+      const headings = displayArea.querySelectorAll('h2, h3'); // Ambil semua judul
+
+      headings.forEach((heading, index) => {
+        const id = 'heading-' + index;
+        heading.setAttribute('id', id); // Beri ID otomatis ke judul
+
+        const option = document.createElement('option');
+        option.value = id;
+        option.text = (heading.tagName === 'H3' ? '--- ' : '') + heading.innerText;
+        dropdown.appendChild(option);
+      });
+    });
+
+  // Fungsi Scroll
+  function scrollToHeading(id) {
+    if (id) {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }
+</script>
 
   <!-- GRID 3 KOLOM -->
   <div class="grid-3col">
